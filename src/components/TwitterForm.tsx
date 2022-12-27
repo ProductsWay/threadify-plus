@@ -60,6 +60,7 @@ export function TwiterForm() {
           value="submit"
         />
       </div>
+      {data.pending && <progress class="w-56 progress"></progress>}
     </Form>
   );
 }
