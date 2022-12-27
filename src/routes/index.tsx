@@ -17,7 +17,7 @@ export default function Home() {
 
       <div class="divider"></div>
 
-      <div class="container justify-center items-center h-64">
+      <div class="container justify-center items-center mx-auto h-64">
         <TwiterForm />
       </div>
     </main>

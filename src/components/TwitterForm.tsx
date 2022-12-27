@@ -17,7 +17,7 @@ export function TwiterForm() {
   return (
     <Form>
       {data.error && (
-        <div class="shadow-lg alert alert-error">
+        <div class="mx-auto shadow-lg alert alert-error">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
