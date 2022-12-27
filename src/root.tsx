@@ -13,6 +13,7 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import Footer from "./components/Footer";
 import "./root.css";
 
 export default function Root() {
@@ -24,7 +25,7 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - With TailwindCSS</Title>
+        <Title>ThreadifyPlus Reader App</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -44,6 +45,7 @@ export default function Root() {
             <Routes>
               <FileRoutes />
             </Routes>
+            <Footer />
           </ErrorBoundary>
         </Suspense>
         <Scripts />
