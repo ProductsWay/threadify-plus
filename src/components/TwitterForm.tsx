@@ -1,6 +1,6 @@
 import { redirect } from "solid-start";
 import { createRouteAction } from "solid-start/data";
-import { getThreadById } from "~/api-client";
+import { getTweetByUrl } from "~/api-client";
 import logger from "~/logger";
 
 export function TwiterForm() {
@@ -9,8 +9,8 @@ export function TwiterForm() {
     if (!url) {
       throw new Error("Invalid url");
     }
-    const { id, ...thread } = await getThreadById(url.toString());
-    logger.info(thread);
+    const { id, ...tweet } = await getTweetByUrl(url.toString());
+    logger.info(tweet);
     return redirect(`/thread/${id}`);
   });
 
