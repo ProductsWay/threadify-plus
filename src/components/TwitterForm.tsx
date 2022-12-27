@@ -1,12 +1,41 @@
+import { redirect } from "solid-start";
 import { createRouteAction } from "solid-start/data";
+import { getThreadById } from "~/api-client";
+import logger from "~/logger";
 
 export function TwiterForm() {
-  const [_, { Form }] = createRouteAction(async (formData: FormData) => {
-    console.log(formData.get("url"));
+  const [data, { Form }] = createRouteAction(async (formData: FormData) => {
+    const url = formData.get("url");
+    if (!url) {
+      throw new Error("Invalid url");
+    }
+    const { id, ...thread } = await getThreadById(url.toString());
+    logger.info(thread);
+    return redirect(`/thread/${id}`);
   });
 
   return (
     <Form>
+      {data.error && (
+        <div class="shadow-lg alert alert-error">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-shrink-0 w-6 h-6 stroke-current"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>Error! {JSON.stringify(data.error)}.</span>
+          </div>
+        </div>
+      )}
       <div class="container flex p-4 mx-auto w-full max-w-lg form-control">
         <label for="url" class="label">
           <span class="label-text">Enter Twitter URL</span>
@@ -24,7 +53,12 @@ export function TwiterForm() {
           name="url"
           required
         />
-        <input class="mt-4 btn btn-primary" type="submit" value="submit" />
+        <input
+          disabled={data.pending}
+          class="mt-4 btn btn-primary"
+          type="submit"
+          value="submit"
+        />
       </div>
     </Form>
   );
