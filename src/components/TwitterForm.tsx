@@ -65,6 +65,17 @@ export function TwiterForm() {
         <div class="flex justify-start items-center mt-4">
           <div class="avatar">
             <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
+              <A href="/thread/1605322303319199744" target="_blank">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1579200056090951680/j3-H7soT_400x400.jpg"
+                  alt="Steve (Builder.io)"
+                  class="mask mask-squircle"
+                />
+              </A>
+            </div>
+          </div>
+          <div class="avatar">
+            <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
               <A href="/thread/1607652286981083136" target="_blank">
                 <img
                   src="https://pbs.twimg.com/profile_images/1573897372408901637/Q8g6SXFM_400x400.jpg"

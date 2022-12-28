@@ -28,3 +28,13 @@ export const getTweetByUrl = async (url: string) => {
 
   return { id, ...result };
 };
+
+export const getVideoById = async (id: string) => {
+  logger.info("get video by id", id);
+  const result = await apiClient
+    .url(`/api/video/${id}`)
+    .get()
+    .json<Record<"meta", { "og:video": string }>>();
+
+  return { id, ...result };
+};

@@ -60,6 +60,13 @@ export default function ThreadPage() {
                 ?.filter((item) => item.type === "photo")
                 ?.map((item) => item.url) ?? []
             }
+            videoId={
+              thread?.[currentId]?.includes?.media?.filter(
+                (item) => item?.type === "video"
+              ).length > 0
+                ? currentId
+                : undefined
+            }
           />
         )}
       </For>

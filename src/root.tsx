@@ -28,6 +28,11 @@ export default function Root() {
         <Title>ThreadifyPlus Reader App</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5337133458846513"
+          cross-origin="anonymous"
+        />
       </Head>
       <Body>
         <Suspense>
