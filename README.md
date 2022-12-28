@@ -9,7 +9,7 @@
 ## 🏠 [Homepage](https://github.com/jellydn/threadify-plus)
 
 ### ✨ [Demo](https://threadify.productsway.com)
-![https://gyazo.com/e71892ab49dac93c987dffc80eb86514.gif](https://gyazo.com/e71892ab49dac93c987dffc80eb86514.gif)
+![https://gyazo.com/1620b3d89c7f7c3f5ae39ff3518ed0ef.gif](https://gyazo.com/1620b3d89c7f7c3f5ae39ff3518ed0ef.gif)
 
 ## Prerequisites
 
@@ -21,9 +21,9 @@ Threadify is a simple and easy-to-use tool that helps users read and share Twitt
 
 Minimum Viable Product (MVP) features:
 
-- [ ] Thread organization: Threadify automatically organizes individual tweets within a thread into a single, easy-to-read page.
+- [x] Thread organization: Threadify automatically organizes individual tweets within a thread into a single, easy-to-read page.
 
-- [ ] Video download: Users can download videos from Twitter threads and save them for later viewing or sharing.
+- [x] Video download: Users can download videos from Twitter threads and save them for later viewing or sharing.
 
 - [ ] Bookmark and share: Users can bookmark their favorite threads and share them with others.
 
