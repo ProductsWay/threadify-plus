@@ -28,7 +28,17 @@ export default function ThreadPage() {
           <li>
             <A href="/">Home</A>
           </li>
-          <li>Detail</li>
+          <li>Thread</li>
+          <li>
+            <A
+              href={`https://twitter.com/${
+                thread?.[id]?.includes?.users?.[0].username ?? ""
+              }/status/${id}`}
+              target="_blank"
+            >
+              {id}
+            </A>
+          </li>
         </ul>
       </div>
       <UserCard
