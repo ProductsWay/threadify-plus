@@ -22,12 +22,17 @@ Threadify is a simple and easy-to-use tool that helps users read and share Twitt
 Minimum Viable Product (MVP) features:
 
 - [x] Thread organization: Threadify automatically organizes individual tweets within a thread into a single, easy-to-read page.
+<img width="1560" alt="image" src="https://user-images.githubusercontent.com/870029/209857433-200aaee6-f92b-4b8d-a664-e1c498b9d781.png">
 
 - [x] Video download: Users can download videos from Twitter threads and save them for later viewing or sharing.
 
+![https://gyazo.com/edba4885e64111bb302c41dac0bdcac3.gif](https://gyazo.com/edba4885e64111bb302c41dac0bdcac3.gif)
+
 - [ ] Bookmark and share: Users can bookmark their favorite threads and share them with others.
 
-- [ ] Responsive design: Threadify is designed to be responsive and work seamlessly on desktop and mobile devices.
+- [x] Responsive design: Threadify is designed to be responsive and work seamlessly on desktop and mobile devices.
+
+![https://gyazo.com/3ebc70fb37ccc874620d8b26376194d3.gif](https://gyazo.com/3ebc70fb37ccc874620d8b26376194d3.gif)
 
 - [ ] User-friendly interface: Threadify has a clean and intuitive interface that makes it easy for users to navigate and use the app.
 
