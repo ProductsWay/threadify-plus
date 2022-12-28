@@ -1,4 +1,3 @@
-import { redirect } from "solid-start";
 import { createRouteAction } from "solid-start/data";
 import { getTweetByUrl } from "~/api-client";
 import logger from "~/logger";
@@ -11,7 +10,8 @@ export function TwiterForm() {
     }
     const { id, ...tweet } = await getTweetByUrl(url.toString());
     logger.info(tweet);
-    return redirect(`/thread/${id}`);
+    // navigate to thread page
+    window.location.href = `/thread/${id}`;
   });
 
   return (
