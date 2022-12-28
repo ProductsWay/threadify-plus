@@ -6,6 +6,11 @@
   <img src="https://img.shields.io/badge/node-%3E%3D16-blue.svg" />
 </p>
 
+## 🏠 [Homepage](https://github.com/jellydn/threadify-plus)
+
+### ✨ [Demo](https://threadify.productsway.com)
+![https://gyazo.com/e71892ab49dac93c987dffc80eb86514.gif](https://gyazo.com/e71892ab49dac93c987dffc80eb86514.gif)
+
 ## Prerequisites
 
 - node >=16
