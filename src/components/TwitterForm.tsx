@@ -1,3 +1,4 @@
+import { A } from "solid-start";
 import { createRouteAction } from "solid-start/data";
 import { getTweetByUrl } from "~/api-client";
 import logger from "~/logger";
@@ -59,6 +60,32 @@ export function TwiterForm() {
           type="submit"
           value="submit"
         />
+
+        <div class="divider">Or take a try with below</div>
+        <div class="flex justify-start items-center mt-4">
+          <div class="avatar">
+            <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
+              <A href="/thread/1607652286981083136" target="_blank">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1573897372408901637/Q8g6SXFM_400x400.jpg"
+                  alt="Chris Staudinger"
+                  class="mask mask-squircle"
+                />
+              </A>
+            </div>
+          </div>
+          <div class="avatar">
+            <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
+              <A href="/thread/1595455606743105536" target="_blank">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1512819600324448257/exWNgG2i_400x400.jpg"
+                  alt="Bytebytego"
+                  class="mask mask-squircle"
+                />
+              </A>
+            </div>
+          </div>
+        </div>
       </div>
       {data.pending && <progress class="w-56 progress"></progress>}
     </Form>
