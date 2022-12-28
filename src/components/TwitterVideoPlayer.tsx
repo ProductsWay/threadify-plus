@@ -1,6 +1,22 @@
 import { createResource, Show } from "solid-js";
 import { getVideoById } from "~/api-client";
 
+async function downloadMp4(url: string, filename: string) {
+  const response = await fetch(url);
+  const file = await response.blob();
+
+  // Create an object URL for the file
+  const objectUrl = URL.createObjectURL(file);
+
+  const a = document.createElement("a");
+  a.href = objectUrl;
+  a.download = filename;
+
+  a.click();
+
+  URL.revokeObjectURL(objectUrl);
+}
+
 export function TwitterVideoPlayer({ videoId }: { videoId: string }) {
   const [video] = createResource(async () => {
     return getVideoById(videoId);
@@ -12,7 +28,16 @@ export function TwitterVideoPlayer({ videoId }: { videoId: string }) {
         <video class="mb-2 video" autoplay controls>
           <source src={video.latest?.meta["og:video"]} type="video/mp4" />
         </video>
-        <button class="gap-2 mb-4 btn">
+
+        <button
+          class="gap-2 mb-4 btn"
+          onClick={() => {
+            downloadMp4(
+              video.latest?.meta?.["og:video"] ?? "",
+              videoId + ".mp4"
+            );
+          }}
+        >
           Download Video
           <svg
             xmlns="http://www.w3.org/2000/svg"
