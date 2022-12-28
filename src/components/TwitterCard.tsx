@@ -1,3 +1,5 @@
+import { For } from "solid-js";
+
 export function TwitterCard({
   images = [],
   createdAt,
@@ -7,11 +9,12 @@ export function TwitterCard({
   createdAt?: Date;
   text?: string;
 }) {
+  // TODO: show embed video
   return (
-    <div class="w-full text-left card bg-base-100">
+    <div class="w-full text-left card bg-base-100 lg:card-side">
       {images?.length > 0 && (
         <figure>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+          <For each={images}>{(image) => <img src={image} alt={image} />}</For>
         </figure>
       )}
       <div class="card-body">

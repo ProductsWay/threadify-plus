@@ -39,7 +39,7 @@ export function TwiterForm() {
       )}
       <div class="container flex p-4 mx-auto w-full max-w-lg form-control">
         <label for="url" class="label">
-          <span class="label-text">Enter Twitter URL</span>
+          <span class="label-text">Enter Twitter URL or ID</span>
           <div
             class="tooltip"
             data-tip="https://twitter.com/{USER}/status/{ID}"
@@ -49,7 +49,7 @@ export function TwiterForm() {
         </label>
         <input
           type="text"
-          placeholder="https://twitter.com/"
+          placeholder="Twitter URL or ID"
           class="w-full input input-bordered"
           name="url"
           required

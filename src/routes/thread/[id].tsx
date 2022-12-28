@@ -55,6 +55,11 @@ export default function ThreadPage() {
                 : undefined
             }
             text={thread?.[currentId]?.data.text}
+            images={
+              thread?.[currentId]?.includes?.media
+                ?.filter((item) => item.type === "photo")
+                ?.map((item) => item.url) ?? []
+            }
           />
         )}
       </For>
