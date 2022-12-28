@@ -17,7 +17,9 @@ export function routeData({ params }: RouteDataArgs) {
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
 
-  const { ids = [], thread, id = "" } = data.latest ?? {};
+  const { thread, id = "" } = data.latest ?? {};
+
+  const ids = (data.latest?.ids ?? []).reverse();
 
   return (
     <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
@@ -35,13 +37,15 @@ export default function ThreadPage() {
         picture={thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""}
       />
       <For each={ids}>
-        {(id) => (
-          <div>
-            <TwitterCard
-              createdAt={thread?.[id]?.data.created_at}
-              text={thread?.[id]?.data.text}
-            />
-          </div>
+        {(currentId) => (
+          <TwitterCard
+            createdAt={
+              currentId === id
+                ? thread?.[currentId]?.data.created_at
+                : undefined
+            }
+            text={thread?.[currentId]?.data.text}
+          />
         )}
       </For>
     </div>

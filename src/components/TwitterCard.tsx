@@ -1,5 +1,5 @@
 export function TwitterCard({
-  images,
+  images = [],
   createdAt,
   text,
 }: {
@@ -8,7 +8,7 @@ export function TwitterCard({
   text?: string;
 }) {
   return (
-    <div class="w-full card bg-base-100">
+    <div class="w-full text-left card bg-base-100">
       {images?.length > 0 && (
         <figure>
           <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
@@ -16,9 +16,11 @@ export function TwitterCard({
       )}
       <div class="card-body">
         <p>{text}</p>
-        <div class="justify-end card-actions">
-          {new Date(createdAt).toUTCString()}
-        </div>
+        {createdAt && (
+          <div class="justify-end card-actions">
+            {new Date(createdAt).toUTCString()}
+          </div>
+        )}
       </div>
     </div>
   );
