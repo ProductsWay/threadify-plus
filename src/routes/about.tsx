@@ -2,13 +2,13 @@ import { A } from "solid-start";
 
 export default function About() {
   return (
-    <div class="min-h-screen hero bg-base-200">
+    <div class="hero bg-base-200">
       <div class="text-center hero-content">
         <div class="max-w-xlg">
-          <h1 class="text-5xl font-bold">About Us</h1>
+          <h1 class="text-6xl font-thin text-sky-700">About Us</h1>
           <p class="py-6">
-            ThreadifyPlus is a simple and easy-to-use tool that helps users read
-            and share Twitter threads with ease.
+            Threadify<sup>+</sup> is a simple and easy-to-use tool that helps
+            users read and share Twitter threads with ease.
           </p>
           <A href="/">
             <button class="btn btn-primary">Get Started</button>

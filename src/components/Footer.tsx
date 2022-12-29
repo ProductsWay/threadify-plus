@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer class="items-center p-4 btm-nav footer bg-neutral text-neutral-content">
+    <footer class="items-center p-4 mt-4 btm-nav footer bg-neutral text-neutral-content">
       <div class="grid-flow-col items-center">
         <p>
           Made with ❤️ by
           <a href="https://productsway.com" class="font-bold hover:underline">
             {" "}
-            Productsway.
+            ProductsWay.
           </a>{" "}
         </p>
       </div>

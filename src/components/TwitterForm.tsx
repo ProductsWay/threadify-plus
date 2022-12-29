@@ -11,14 +11,14 @@ export function TwiterForm() {
     }
     const { id, ...tweet } = await getTweetByUrl(url.toString());
     logger.info(tweet);
-    // navigate to thread page
+    // TODO: navigate to thread page with redirect()
     window.location.href = `/thread/${id}`;
   });
 
   return (
-    <Form>
+    <Form class="mx-auto max-w-lg h-96">
       {data.error && (
-        <div class="mx-auto shadow-lg alert alert-error">
+        <div class="shadow-lg alert alert-error">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export function TwiterForm() {
           </div>
         </div>
       )}
-      <div class="container flex p-4 mx-auto w-full max-w-lg form-control">
+      <div class="flex p-4 mx-auto form-control">
         <label for="url" class="label">
           <span class="label-text">Enter Twitter URL or ID</span>
           <div
@@ -56,10 +56,15 @@ export function TwiterForm() {
         />
         <input
           disabled={data.pending}
-          class="mt-4 btn btn-primary"
+          class={
+            data.pending
+              ? "mt-4 btn btn-primary loading"
+              : "mt-4 btn btn-primary"
+          }
           type="submit"
           value="submit"
         />
+        {data.pending && <progress class="mt-2 w-56 progress"></progress>}
 
         <div class="divider">Or take a try with below</div>
         <div class="flex justify-start items-center mt-4">
@@ -98,7 +103,6 @@ export function TwiterForm() {
           </div>
         </div>
       </div>
-      {data.pending && <progress class="w-56 progress"></progress>}
     </Form>
   );
 }
