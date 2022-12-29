@@ -15,6 +15,13 @@
 
 - node >=16
 
+## Built with
+
+- [solidjs/solid-start: SolidStart, the Solid app framework](https://github.com/solidjs/solid-start)
+- [jellydn/twitter-threads: Twitter Threads App helps you read and share Twitter threads easily!](https://github.com/jellydn/twitter-threads)
+- [elbywan/wretch: A tiny wrapper built around fetch with an intuitive syntax.](https://github.com/elbywan/wretch)
+- [saadeghi/daisyui: ⭐️ ⭐️ ⭐️ ⭐️ ⭐️  The most popular, free and open-source Tailwind CSS component library](https://github.com/saadeghi/daisyui)
+
 ## Features
 
 Threadify is a simple and easy-to-use tool that helps users read and share Twitter threads with ease.
