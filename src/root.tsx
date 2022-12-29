@@ -12,6 +12,7 @@ import {
   Routes,
   Scripts,
   Title,
+  Link,
 } from "solid-start";
 import Footer from "./components/Footer";
 import "./root.css";
@@ -31,6 +32,11 @@ export default function Root() {
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
+        <Meta
+          name="description"
+          content="Threadify+ is a simple and easy-to-use tool that helps users read and share Twitter threads with ease."
+        />
+        <Link rel="manifest" href="/site.webmanifest" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5337133458846513"
