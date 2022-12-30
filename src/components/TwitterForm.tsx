@@ -12,6 +12,7 @@ export function TwiterForm() {
     const { id, ...tweet } = await getTweetByUrl(url.toString());
     logger.info(tweet);
     // TODO: navigate to thread page with redirect()
+    // TODO: show toast message
     window.location.href = `/thread/${id}`;
   });
 
@@ -72,7 +73,7 @@ export function TwiterForm() {
             <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
               <A href="/thread/1605322303319199744" target="_blank">
                 <img
-                  src="https://pbs.twimg.com/profile_images/1579200056090951680/j3-H7soT_400x400.jpg"
+                  src="https://pbs.twimg.com/profile_images/1579200056090951680/j3-H7soT_200x200.jpg"
                   alt="Steve (Builder.io)"
                   class="mask mask-squircle"
                 />
@@ -83,7 +84,7 @@ export function TwiterForm() {
             <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
               <A href="/thread/1607652286981083136" target="_blank">
                 <img
-                  src="https://pbs.twimg.com/profile_images/1573897372408901637/Q8g6SXFM_400x400.jpg"
+                  src="https://pbs.twimg.com/profile_images/1573897372408901637/Q8g6SXFM_200x200.jpg"
                   alt="Chris Staudinger"
                   class="mask mask-squircle"
                 />
@@ -94,8 +95,19 @@ export function TwiterForm() {
             <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
               <A href="/thread/1595455606743105536" target="_blank">
                 <img
-                  src="https://pbs.twimg.com/profile_images/1512819600324448257/exWNgG2i_400x400.jpg"
+                  src="https://pbs.twimg.com/profile_images/1512819600324448257/exWNgG2i_200x200.jpg"
                   alt="Bytebytego"
+                  class="mask mask-squircle"
+                />
+              </A>
+            </div>
+          </div>
+          <div class="avatar">
+            <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
+              <A href="/thread/1607488421685231617" target="_blank">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1027023337497800704/4rtouf4R_200x200.jpg"
+                  alt="goodside"
                   class="mask mask-squircle"
                 />
               </A>
