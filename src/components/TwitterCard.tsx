@@ -40,7 +40,10 @@ export function TwitterCard({
             <div class="flex gap-2 justify-center py-2 w-full">
               <For each={images}>
                 {(image, index) => (
-                  <a href={`#${getFilename(image)}`} class="btn btn-xs">
+                  <a
+                    href={`#${getFilename(image)}`}
+                    class="btn btn-sm btn-secondary"
+                  >
                     {index.call(index) + 1}
                   </a>
                 )}

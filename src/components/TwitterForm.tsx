@@ -17,7 +17,7 @@ export function TwiterForm() {
   });
 
   return (
-    <Form class="mx-auto max-w-lg h-96">
+    <Form class="mx-auto max-w-lg">
       {data.error && (
         <div class="shadow-lg alert alert-error">
           <div>
@@ -38,37 +38,39 @@ export function TwiterForm() {
           </div>
         </div>
       )}
-      <div class="flex p-4 mx-auto form-control">
-        <label for="url" class="label">
-          <span class="label-text">Enter Twitter URL or ID</span>
-          <div
-            class="tooltip"
-            data-tip="https://twitter.com/{USER}/status/{ID}"
-          >
-            <span class="badge">Example</span>
-          </div>
-        </label>
-        <input
-          type="text"
-          placeholder="Twitter URL or ID"
-          class="w-full input input-bordered"
-          name="url"
-          required
-        />
-        <input
-          disabled={data.pending}
-          class={
-            data.pending
-              ? "mt-4 btn btn-primary loading"
-              : "mt-4 btn btn-primary"
-          }
-          type="submit"
-          value="submit"
-        />
-        {data.pending && <progress class="mt-2 w-56 progress"></progress>}
+      <div class="mx-auto form-control"></div>
 
-        <div class="divider">Or take a try with below</div>
-        <div class="flex justify-start items-center mt-4">
+      <div class="container flex mx-auto">
+        <div class="flex relative z-10 flex-col p-8 w-full bg-white rounded-lg shadow-md">
+          <h2 class="mb-1 text-lg font-medium text-gray-900 title-font">
+            Unroll Twitter Thread
+          </h2>
+          <div class="relative mb-4">
+            <input
+              type="text"
+              id="url"
+              name="url"
+              required
+              placeholder="Enter your Twitter URL or ID"
+              class="w-full input input-bordered"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+          <p class="mt-3 text-xs text-gray-500">
+            A Twitter URL has the format
+            https://twitter.com/[USERNAME]/status/[ID]. The ID is the number at
+            the end of the URL.
+          </p>
+        </div>
+      </div>
+
+      {data.pending && <progress class="mt-2 w-56 progress"></progress>}
+
+      <div class="divider">Or take a try with below</div>
+      <div class="mb-16">
+        <div class="flex justify-center items-center mt-4">
           <div class="avatar">
             <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
               <A href="/thread/1605322303319199744" target="_blank">
