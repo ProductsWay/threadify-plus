@@ -1,5 +1,11 @@
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import { TwitterVideoPlayer } from "./TwitterVideoPlayer";
+
+const getFilename = (fileUrl: string) => {
+  const fileName = new URL(fileUrl).pathname.split("/").pop();
+
+  return fileName;
+};
 
 export function TwitterCard({
   images = [],
@@ -13,12 +19,37 @@ export function TwitterCard({
   videoId?: string;
 }) {
   return (
-    <div class="w-full text-left card bg-base-100 lg:card-side">
-      {images?.length > 0 && (
-        <figure>
-          <For each={images}>{(image) => <img src={image} alt={image} />}</For>
-        </figure>
-      )}
+    <div class="mb-4 w-full text-left card bg-base-100 lg:card-side">
+      <Show when={images?.length}>
+        <div class="max-w-xl bg-neutral rounded-box">
+          <div class="w-full carousel">
+            <For each={images}>
+              {(image) => (
+                <div
+                  id={getFilename(image)}
+                  class="relative w-full carousel-item"
+                >
+                  <figure>
+                    <img class="contain" src={image} alt={image} />
+                  </figure>
+                </div>
+              )}
+            </For>
+          </div>
+          <Show when={(images?.length ?? 0) > 1}>
+            <div class="flex gap-2 justify-center py-2 w-full">
+              <For each={images}>
+                {(image, index) => (
+                  <a href={`#${getFilename(image)}`} class="btn btn-xs">
+                    {index.call(index) + 1}
+                  </a>
+                )}
+              </For>
+            </div>
+          </Show>
+        </div>
+      </Show>
+
       {videoId && <TwitterVideoPlayer videoId={videoId} />}
       <div class="card-body">
         <p>{text}</p>
