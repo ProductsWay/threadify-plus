@@ -42,6 +42,11 @@ export default function Root() {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5337133458846513"
           cross-origin="anonymous"
         />
+        <script
+          data-goatcounter="https://threadify.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        ></script>
       </Head>
       <Body>
         <Suspense>
