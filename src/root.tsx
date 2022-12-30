@@ -59,6 +59,9 @@ export default function Root() {
                 <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
                   <A href="/about">About</A>
                 </li>
+                <li class={`border-b-2 ${active("/faq")} mx-1.5 sm:mx-6`}>
+                  <A href="/faq">FAQ</A>
+                </li>
               </ul>
             </nav>
             <Routes>
