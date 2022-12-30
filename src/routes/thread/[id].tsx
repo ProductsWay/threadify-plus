@@ -20,17 +20,19 @@ export default function ThreadPage() {
 
   const { thread, id = "" } = data.latest ?? {};
 
-  const ids = (data.latest?.ids ?? []).reverse();
+  const ids = Array.from(data.latest?.ids ?? []).reverse();
+  const threadId = data.latest?.ids?.[data.latest?.ids?.length - 1];
 
   return (
     <Show when={data()}>
       <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
         <SiteTitle>
-          Thread {id} by {thread?.[id]?.includes?.users?.[0].username ?? ""}
+          Thread {threadId} by{" "}
+          {thread?.[id]?.includes?.users?.[0].username ?? ""}
         </SiteTitle>
         <Meta
           property="og:title"
-          content={`Thread ${id} by ${
+          content={`Thread ${threadId} by ${
             thread?.[id]?.includes?.users?.[0].username ?? ""
           }
 `}
@@ -47,10 +49,10 @@ export default function ThreadPage() {
               <A
                 href={`https://twitter.com/${
                   thread?.[id]?.includes?.users?.[0].username ?? ""
-                }/status/${id}`}
+                }/status/${threadId}`}
                 target="_blank"
               >
-                {id}
+                {threadId}
               </A>
             </li>
           </ul>
@@ -77,7 +79,7 @@ export default function ThreadPage() {
               videoId={
                 thread?.[currentId]?.includes?.media?.filter(
                   (item) => item?.type === "video"
-                ).length > 0
+                )?.length ?? 0 > 0
                   ? currentId
                   : undefined
               }
