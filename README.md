@@ -9,7 +9,7 @@
 ## 🏠 [Homepage](https://github.com/jellydn/threadify-plus)
 
 ### ✨ [Demo](https://threadify.productsway.com)
-![https://gyazo.com/1620b3d89c7f7c3f5ae39ff3518ed0ef.gif](https://gyazo.com/1620b3d89c7f7c3f5ae39ff3518ed0ef.gif)
+![https://gyazo.com/a7cb0d4d322c2434d2a148248fa2a75b.gif](https://gyazo.com/a7cb0d4d322c2434d2a148248fa2a75b.gif)
 
 ## Prerequisites
 
