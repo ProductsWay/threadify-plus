@@ -1,4 +1,6 @@
 import { For, Show } from "solid-js";
+// @ts-expect-error missing typing https://github.com/eKoopmans/html2pdf.js/issues/460
+import html2pdf from "html2pdf.js";
 import { A, Meta, RouteDataArgs, useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
 import { getThreadById } from "~/api-client";
@@ -14,6 +16,15 @@ export function routeData({ params }: RouteDataArgs) {
     key: () => ["threads", params.id],
   });
 }
+
+const downloadPdfFile = (id?: string) => {
+  const element = document.getElementById("thread");
+  const opt = {
+    filename: `${id}.pdf`,
+  };
+
+  return html2pdf().set(opt).from(element).save();
+};
 
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
@@ -57,36 +68,63 @@ export default function ThreadPage() {
             </li>
           </ul>
         </div>
-        <UserCard
-          name={thread?.[id]?.includes?.users?.[0].name ?? ""}
-          username={thread?.[id]?.includes?.users?.[0].username ?? ""}
-          picture={thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""}
-        />
-        <For each={ids}>
-          {(currentId) => (
-            <TwitterCard
-              createdAt={
-                currentId === id
-                  ? thread?.[currentId]?.data.created_at
-                  : undefined
-              }
-              text={thread?.[currentId]?.data.text}
-              images={
-                thread?.[currentId]?.includes?.media
-                  ?.filter((item) => item.type === "photo")
-                  ?.map((item) => item.url) ?? []
-              }
-              videoId={
-                thread?.[currentId]?.includes?.media?.filter(
-                  (item) => item?.type === "video"
-                )?.length ?? 0 > 0
-                  ? currentId
-                  : undefined
-              }
-            />
-          )}
-        </For>
+        <div
+          id="thread"
+          class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center"
+        >
+          <UserCard
+            name={thread?.[id]?.includes?.users?.[0].name ?? ""}
+            username={thread?.[id]?.includes?.users?.[0].username ?? ""}
+            picture={thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""}
+          />
+          <For each={ids}>
+            {(currentId) => (
+              <TwitterCard
+                createdAt={
+                  currentId === id
+                    ? thread?.[currentId]?.data.created_at
+                    : undefined
+                }
+                text={thread?.[currentId]?.data.text}
+                images={
+                  thread?.[currentId]?.includes?.media
+                    ?.filter((item) => item.type === "photo")
+                    ?.map((item) => item.url) ?? []
+                }
+                videoId={
+                  thread?.[currentId]?.includes?.media?.filter(
+                    (item) => item?.type === "video"
+                  )?.length ?? 0 > 0
+                    ? currentId
+                    : undefined
+                }
+              />
+            )}
+          </For>
+        </div>
       </div>
+      <button
+        class="absolute top-0 right-0 mt-2 btn btn-sm btn-secondary"
+        type="button"
+        onClick={() => downloadPdfFile(threadId)}
+      >
+        <svg
+          width="20"
+          height="20"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="mr-2 w-4 h-4 stroke-current"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          ></path>
+        </svg>
+        Print Document
+      </button>
     </Show>
   );
 }

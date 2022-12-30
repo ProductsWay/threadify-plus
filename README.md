@@ -20,7 +20,9 @@
 - [solidjs/solid-start: SolidStart, the Solid app framework](https://github.com/solidjs/solid-start)
 - [jellydn/twitter-threads: Twitter Threads App helps you read and share Twitter threads easily!](https://github.com/jellydn/twitter-threads)
 - [elbywan/wretch: A tiny wrapper built around fetch with an intuitive syntax.](https://github.com/elbywan/wretch)
-- [saadeghi/daisyui: ⭐️ ⭐️ ⭐️ ⭐️ ⭐️  The most popular, free and open-source Tailwind CSS component library](https://github.com/saadeghi/daisyui)
+- [eKoopmans/html2pdf.js: Client-side HTML-to-PDF rendering using pure JS.](https://github.com/eKoopmans/html2pdf.js#npm)
+- [saadeghi/daisyui: The most popular, free and open-source Tailwind CSS component library](https://github.com/saadeghi/daisyui)
+
 
 ## Features
 
