@@ -18,7 +18,8 @@ export function routeData({ params }: RouteDataArgs) {
 const downloadPdfFile = async (id?: string) => {
   const element = document.getElementById("thread");
   const opt = {
-    filename: `${id}.pdf`,
+    filename: `${id}-${Date.now()}.pdf`,
+    pagebreak: { mode: ["avoid-all", "css", "legacy"] },
   };
 
   // @ts-expect-error global html2pdf from CDN
