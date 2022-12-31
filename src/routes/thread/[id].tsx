@@ -34,7 +34,7 @@ export default function ThreadPage() {
   const threadId = data.latest?.ids?.[data.latest?.ids?.length - 1];
 
   return (
-    <Show when={data()}>
+    <Show when={data()} fallback={<p>Loading...</p>}>
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
@@ -55,58 +55,63 @@ export default function ThreadPage() {
         />
         <Meta property="og:description" content={thread?.[id]?.data?.text} />
 
-        <div class="text-sm breadcrumbs">
-          <ul>
-            <li>
-              <A href="/">Home</A>
-            </li>
-            <li>Thread</li>
-            <li>
-              <A
-                href={`https://twitter.com/${
-                  thread?.[id]?.includes?.users?.[0].username ?? ""
-                }/status/${threadId}`}
-                target="_blank"
-              >
-                {threadId}
-              </A>
-            </li>
-          </ul>
-        </div>
-        <div
-          id="thread"
-          class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center"
-        >
-          <UserCard
-            name={thread?.[id]?.includes?.users?.[0].name ?? ""}
-            username={thread?.[id]?.includes?.users?.[0].username ?? ""}
-            picture={thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""}
-          />
-          <For each={ids}>
-            {(currentId) => (
-              <TwitterCard
-                createdAt={
-                  currentId === id
-                    ? thread?.[currentId]?.data.created_at
-                    : undefined
-                }
-                text={thread?.[currentId]?.data.text}
-                images={
-                  thread?.[currentId]?.includes?.media
-                    ?.filter((item) => item.type === "photo")
-                    ?.map((item) => item.url) ?? []
-                }
-                videoId={
-                  thread?.[currentId]?.includes?.media?.filter(
-                    (item) => item?.type === "video"
-                  )?.length ?? 0 > 0
-                    ? currentId
-                    : undefined
-                }
-              />
-            )}
-          </For>
-        </div>
+        <Show when={thread?.[id]} fallback={<p>Loading...</p>}>
+          <div class="text-sm breadcrumbs">
+            <ul>
+              <li>
+                <A href="/">Home</A>
+              </li>
+              <li>Thread</li>
+              <li>
+                <A
+                  href={`https://twitter.com/${
+                    thread?.[id]?.includes?.users?.[0].username ?? ""
+                  }/status/${threadId}`}
+                  target="_blank"
+                >
+                  {threadId}
+                </A>
+              </li>
+            </ul>
+          </div>
+          <div
+            id="thread"
+            class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center"
+          >
+            <UserCard
+              name={thread?.[id]?.includes?.users?.[0].name ?? ""}
+              username={thread?.[id]?.includes?.users?.[0].username ?? ""}
+              picture={
+                thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""
+              }
+            />
+
+            <For each={ids}>
+              {(currentId) => (
+                <TwitterCard
+                  createdAt={
+                    currentId === id
+                      ? thread?.[currentId]?.data.created_at
+                      : undefined
+                  }
+                  text={thread?.[currentId]?.data.text}
+                  images={
+                    thread?.[currentId]?.includes?.media
+                      ?.filter((item) => item.type === "photo")
+                      ?.map((item) => item.url) ?? []
+                  }
+                  videoId={
+                    thread?.[currentId]?.includes?.media?.filter(
+                      (item) => item?.type === "video"
+                    )?.length ?? 0 > 0
+                      ? currentId
+                      : undefined
+                  }
+                />
+              )}
+            </For>
+          </div>
+        </Show>
       </div>
       <button
         class="absolute top-0 right-0 mt-2 btn btn-sm btn-secondary"

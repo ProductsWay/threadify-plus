@@ -1,7 +1,14 @@
+import { Show } from "solid-js";
 import { A } from "solid-start";
 import { createRouteAction } from "solid-start/data";
 import { getTweetByUrl } from "~/api-client";
 import logger from "~/logger";
+import { ToastMsg } from "./ToastMsg";
+
+const redirectAction = async (id: string) => {
+  logger.info("redirecting to thread page");
+  window.location.href = "/thread/" + id;
+};
 
 export function TwiterForm() {
   const [data, { Form }] = createRouteAction(async (formData: FormData) => {
@@ -11,9 +18,8 @@ export function TwiterForm() {
     }
     const { id, ...tweet } = await getTweetByUrl(url.toString());
     logger.info(tweet);
-    // TODO: navigate to thread page with redirect()
-    // TODO: show toast message
-    window.location.href = `/thread/${id}`;
+    redirectAction(id);
+    return id;
   });
 
   return (
@@ -38,7 +44,10 @@ export function TwiterForm() {
           </div>
         </div>
       )}
-      <div class="mx-auto form-control"></div>
+
+      <Show when={data.result}>
+        <ToastMsg msg="Unrolling your thread..." type="success" />
+      </Show>
 
       <div class="container flex mx-auto">
         <div class="flex relative z-10 flex-col p-8 w-full bg-white rounded-lg shadow-md">
