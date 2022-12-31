@@ -1,6 +1,4 @@
 import { For, Show } from "solid-js";
-// @ts-expect-error missing typing https://github.com/eKoopmans/html2pdf.js/issues/460
-import html2pdf from "html2pdf.js";
 import { A, Meta, RouteDataArgs, useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
 import { getThreadById } from "~/api-client";
@@ -17,13 +15,14 @@ export function routeData({ params }: RouteDataArgs) {
   });
 }
 
-const downloadPdfFile = (id?: string) => {
+const downloadPdfFile = async (id?: string) => {
   const element = document.getElementById("thread");
   const opt = {
     filename: `${id}.pdf`,
   };
 
-  return html2pdf().set(opt).from(element).save();
+  // @ts-expect-error global html2pdf from CDN
+  return window.html2pdf().set(opt).from(element).save();
 };
 
 export default function ThreadPage() {
@@ -36,6 +35,12 @@ export default function ThreadPage() {
 
   return (
     <Show when={data()}>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
       <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
         <SiteTitle>
           Thread {threadId} by{" "}
