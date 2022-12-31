@@ -20,6 +20,7 @@ const downloadPdfFile = async (id?: string) => {
   const opt = {
     filename: `${id}-${Date.now()}.pdf`,
     pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+    html2canvas: { scale: 2, useCORS: true },
   };
 
   // @ts-expect-error global html2pdf from CDN
