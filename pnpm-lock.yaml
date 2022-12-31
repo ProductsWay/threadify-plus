@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.13
   consola: 2.15.3
   daisyui: 2.46.0
-  magic-sdk: ^11.0.0
+  magic-sdk: 11.0.0
   postcss: 8.4.20
   solid-js: 1.6.6
   solid-start: 0.2.9
@@ -1960,7 +1960,7 @@ packages:
     resolution: {integrity: sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==}
     dependencies:
       inherits: 2.0.4
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
 
   /cliui/8.0.1:
@@ -2528,7 +2528,7 @@ packages:
       keccak: 3.0.3
       pbkdf2: 3.1.2
       randombytes: 2.1.0
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
       scrypt-js: 3.0.1
       secp256k1: 4.0.3
       setimmediate: 1.0.5
@@ -2980,7 +2980,7 @@ packages:
     dependencies:
       hash-base: 3.1.0
       inherits: 2.0.4
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
 
   /merge-anything/5.1.4:
@@ -3277,7 +3277,7 @@ packages:
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
 
   /read-cache/1.0.0:
@@ -3464,7 +3464,7 @@ packages:
     hasBin: true
     dependencies:
       inherits: 2.0.4
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
 
   /simple-concat/1.0.1:
