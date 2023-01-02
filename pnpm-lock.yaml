@@ -6,7 +6,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.8
   autoprefixer: 10.4.13
   consola: 2.15.3
-  daisyui: 2.46.0
+  daisyui: 2.46.1
   magic-sdk: 11.0.0
   postcss: 8.4.20
   solid-js: 1.6.6
@@ -24,7 +24,7 @@ dependencies:
   '@solidjs/router': 0.6.0_solid-js@1.6.6
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   consola: 2.15.3
-  daisyui: 2.46.0_r4gnkvssmvyxmi2wmat5xbx36a
+  daisyui: 2.46.1_r4gnkvssmvyxmi2wmat5xbx36a
   magic-sdk: 11.0.0
   solid-js: 1.6.6
   solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
@@ -2108,8 +2108,8 @@ packages:
       type: 1.2.0
     dev: false
 
-  /daisyui/2.46.0_r4gnkvssmvyxmi2wmat5xbx36a:
-    resolution: {integrity: sha512-7L+KMCADsAmZkJUIabgDSpqEF9+uVPvyJSkSieOpY2WKeDd2pvcELZMs/AKaKkB5gcrb9cPP9vFdLXeDFJj90g==}
+  /daisyui/2.46.1_r4gnkvssmvyxmi2wmat5xbx36a:
+    resolution: {integrity: sha512-i59+nLuzzPAVOhNhot3KLtt6stfYeCIPXs9uiLcpXjykpqxHfBA3W6hQWOUWPMwfqhyQd0WKub3sydtPGjzLtA==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
