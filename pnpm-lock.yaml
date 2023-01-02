@@ -10,9 +10,9 @@ specifiers:
   magic-sdk: 11.0.0
   postcss: 8.4.20
   solid-js: 1.6.6
-  solid-start: 0.2.9
-  solid-start-node: 0.2.9
-  solid-start-vercel: 0.2.9
+  solid-start: 0.2.10
+  solid-start-node: 0.2.10
+  solid-start-vercel: 0.2.10
   tailwindcss: 3.2.4
   typescript: 4.9.4
   undici: 5.14.0
@@ -27,15 +27,15 @@ dependencies:
   daisyui: 2.46.1_r4gnkvssmvyxmi2wmat5xbx36a
   magic-sdk: 11.0.0
   solid-js: 1.6.6
-  solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
-  solid-start-vercel: 0.2.9_c4jszhx5pex7d4ob4c4rfufj2m
+  solid-start: 0.2.10_kao6przsv5ql3q4f4c3i67jucm
+  solid-start-vercel: 0.2.10_nlzvn6moy4kg5aot7ctckdsupi
   undici: 5.14.0
   wretch: 2.3.0
 
 devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.20
   postcss: 8.4.20
-  solid-start-node: 0.2.9_zvgbq2wvjgpdvhi5n4eacxugum
+  solid-start-node: 0.2.10_ldiyvz5qs4hpxhhpof26r66yfi
   tailwindcss: 3.2.4_postcss@8.4.20
   typescript: 4.9.4
   vite: 4.0.3
@@ -1597,13 +1597,13 @@ packages:
   /@types/bn.js/4.11.6:
     resolution: {integrity: sha512-pqr857jrp2kPuO9uRjZ3PwnJTjoQy+fcdxvBTvHm6dkmEL9q+hDD/2j/0ELOBPtPnS8LjCX0gI9nbl8lVkadpg==}
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 18.11.18
     dev: false
 
   /@types/bn.js/5.1.1:
     resolution: {integrity: sha512-qNrYbZqMx0uJAfKnKclPh+dTwK33KfLHYqtyODwd5HnXOjnkhc4qgn3BrK6RWyGZm5+sIFE7Q7Vz6QQtJB7w7g==}
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 18.11.18
     dev: false
 
   /@types/cookie/0.5.1:
@@ -1625,7 +1625,7 @@ packages:
   /@types/pbkdf2/3.1.0:
     resolution: {integrity: sha512-Cf63Rv7jCQ0LaL8tNXmEyqTHuIJxRdlS5vMh1mj5voN4+QFhVZnlZruezqpWYDiJ8UTzhP0VmeLXCmBk66YrMQ==}
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 18.11.18
     dev: false
 
   /@types/resolve/1.17.1:
@@ -1636,7 +1636,7 @@ packages:
   /@types/secp256k1/4.0.3:
     resolution: {integrity: sha512-Da66lEIFeIz9ltsdMZcpQvmrmmoqrfju8pm1BH8WbYjZSwUgCwXLb9C+9XYogwBITnbsSaMdVPb2ekf7TV+03w==}
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 18.11.18
     dev: false
 
   /@vinxi/rollup-plugin-visualizer/5.7.1_rollup@2.79.1:
@@ -3509,8 +3509,8 @@ packages:
       '@babel/types': 7.20.7
       solid-js: 1.6.6
 
-  /solid-start-node/0.2.9_zvgbq2wvjgpdvhi5n4eacxugum:
-    resolution: {integrity: sha512-uOVHyM1G6/XLKJe3zQ67D49WxoL4cPy+35rTgCJoRmBIhTk/wrFr+LmJWxszpnAimQ6SHi12ap5feTdNzb/2Zg==}
+  /solid-start-node/0.2.10_ldiyvz5qs4hpxhhpof26r66yfi:
+    resolution: {integrity: sha512-m66PavGU/Tm9OLnhifZ+rBQwwkD9iFdOVsZ20udSrb+KG71mjUIsio3XZ0WZIDJ8VPDY1pbyOL2kd5iCJUpyiA==}
     peerDependencies:
       solid-start: '*'
       undici: ^5.8.0
@@ -3523,7 +3523,7 @@ packages:
       polka: 1.0.0-next.22
       rollup: 2.79.1
       sirv: 2.0.2
-      solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
+      solid-start: 0.2.10_kao6przsv5ql3q4f4c3i67jucm
       terser: 5.16.1
       undici: 5.14.0
       vite: 4.0.3
@@ -3531,8 +3531,8 @@ packages:
       - supports-color
     dev: true
 
-  /solid-start-vercel/0.2.9_c4jszhx5pex7d4ob4c4rfufj2m:
-    resolution: {integrity: sha512-HesOviAfkvpy2p9pn3GUgU+2DorvxSX/yBQE0mqz1vnWAzni52gk9LxGBl7TpPcOp3YoZuSPXSGDFLV51kM+iw==}
+  /solid-start-vercel/0.2.10_nlzvn6moy4kg5aot7ctckdsupi:
+    resolution: {integrity: sha512-vdyAP0H0Hwi+f2T0XoTQ3ZHfgC8TGGr2fQXRz981n4tPYObbDhKqnhGtxdHNXObcKe+ryOGDpXvdhZKEsOuW5A==}
     peerDependencies:
       solid-start: '*'
       vite: '*'
@@ -3541,13 +3541,13 @@ packages:
       '@rollup/plugin-json': 4.1.0_rollup@2.79.1
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
       rollup: 2.79.1
-      solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
+      solid-start: 0.2.10_kao6przsv5ql3q4f4c3i67jucm
       terser: 5.16.1
       vite: 4.0.3
     dev: false
 
-  /solid-start/0.2.9_kao6przsv5ql3q4f4c3i67jucm:
-    resolution: {integrity: sha512-t8wxOMvrbT6MGfWYQctD+f0O4KqFxI9zb4Bpj8JucFoHKkWboMYrIpXB0ll/GB3U6hXyxhAi589UwfqcgNrKOw==}
+  /solid-start/0.2.10_kao6przsv5ql3q4f4c3i67jucm:
+    resolution: {integrity: sha512-teiSMeBnQ/7ijq1+Ndnl2U2Z7y71tzRWWV8Ur7uEeOvS74+cYbfRlmHeqln7yBwtiAHXJfEPLsmWEshArvCZnQ==}
     hasBin: true
     peerDependencies:
       '@solidjs/meta': ^0.28.0
