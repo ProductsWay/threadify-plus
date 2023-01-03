@@ -14,9 +14,13 @@ export async function GET(event: APIEvent) {
   }
 
   const data = await getLinkPreview(url, {
+    headers: {
+      "User-Agent": "TwitterBot",
+      "Accept-Language": "en-US",
+    },
     followRedirects: "follow",
     handleRedirects: (baseURL: string, forwardedURL: string) => {
-      logger.info("redirect", baseURL, forwardedURL);
+      logger.info("handle redirect", baseURL, forwardedURL);
       const urlObj = new URL(baseURL);
       const forwardedURLObj = new URL(forwardedURL);
       if (
