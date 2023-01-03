@@ -50,7 +50,24 @@ export default function Root() {
       </Head>
       <Body>
         <Suspense>
-          <ErrorBoundary>
+          <ErrorBoundary
+            fallback={(e: Error) => (
+              <div class="flex flex-col justify-center items-center w-full h-screen">
+                <h2 class="text-6xl font-bold tracking-wider text-gray-300 md:text-7xl lg:text-9xl">
+                  Oops! An Error!
+                </h2>
+                <details class="py-2 mt-8 text-center text-gray-500 border-y-2">
+                  <summary>Click here to learn more</summary>
+                  <p>
+                    <strong>{e.name}</strong>: {e.message}
+                  </p>
+                </details>
+                <A href="/" class="mt-8 btn btn-primary">
+                  Go Home
+                </A>
+              </div>
+            )}
+          >
             <nav class="bg-sky-800">
               <ul class="container flex items-center p-3 text-gray-200">
                 <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
