@@ -20,6 +20,7 @@
     "@tailwindcss/typography": "0.5.8",
     "consola": "2.15.3",
     "daisyui": "2.46.1",
+    "link-preview-js": "3.0.4",
     "magic-sdk": "11.0.0",
     "solid-js": "1.6.6",
     "solid-start": "0.2.10",
