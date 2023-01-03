@@ -6,8 +6,9 @@ export default function Footer() {
           Made with ❤️ by
           <a href="https://productsway.com" class="font-bold hover:underline">
             {" "}
-            ProductsWay.
+            ProductsWay
           </a>{" "}
+          © {new Date().getFullYear()}
         </p>
       </div>
       <div class="grid-flow-col md:justify-self-end md:place-self-center">
