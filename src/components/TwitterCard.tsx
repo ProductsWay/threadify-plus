@@ -7,6 +7,15 @@ const getFilename = (fileUrl: string) => {
   return fileName;
 };
 
+const ConvertUrlToLink = ({ text }: { text?: string }) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const htmlContent = text?.replace(urlRegex, (url) => {
+    return `<a class="link" href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+  });
+
+  return <div innerHTML={htmlContent} />;
+};
+
 export function TwitterCard({
   images = [],
   createdAt,
@@ -55,7 +64,8 @@ export function TwitterCard({
 
       {videoId && <TwitterVideoPlayer videoId={videoId} />}
       <div class="card-body">
-        <p>{text}</p>
+        <ConvertUrlToLink text={text} />
+
         {createdAt && (
           <div class="justify-end card-actions">
             {new Date(createdAt).toUTCString()}
