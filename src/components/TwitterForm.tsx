@@ -5,9 +5,10 @@ import { getTweetByUrl } from "~/api-client";
 import logger from "~/logger";
 import { ToastMsg } from "./ToastMsg";
 
-const redirectAction = async (id: string) => {
+const redirectAction = (id: string) => {
   logger.info("redirecting to thread page");
-  window.location.href = "/thread/" + id;
+  const url = `/thread/${id}`;
+  window.location.href = url;
 };
 
 export function TwiterForm() {
@@ -119,6 +120,28 @@ export function TwiterForm() {
                 <img
                   src="https://pbs.twimg.com/profile_images/1027023337497800704/4rtouf4R_200x200.jpg"
                   alt="goodside"
+                  class="mask mask-squircle"
+                />
+              </A>
+            </div>
+          </div>
+          <div class="avatar">
+            <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
+              <A href="/thread/1589285203436277763" target="_blank">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1436384085157371906/XL60VTpr_200x200.jpg"
+                  alt="MrAhmadAwais"
+                  class="mask mask-squircle"
+                />
+              </A>
+            </div>
+          </div>
+          <div class="avatar">
+            <div class="p-1 w-16 h-16 mask mask-squircle bg-base-100">
+              <A href="/thread/1584971602797953026" target="_blank">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1593304942210478080/TUYae5z7_200x200.jpg"
+                  alt="shadcn"
                   class="mask mask-squircle"
                 />
               </A>
