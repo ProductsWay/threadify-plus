@@ -4,7 +4,7 @@ import { TwitterDetail } from "./types";
 
 export const apiClient = wretch("https://twitter-threads.productsway.com"); // Base url
 
-export const getThreadById = async (id: string, limit = 20) => {
+export const getThreadById = async (id: string, limit = 50) => {
   logger.info("get thread by id", id);
   const result = await apiClient
     .url(`/api/thread/${id}?limit=${Number(limit)}`)
