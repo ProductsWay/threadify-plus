@@ -55,7 +55,15 @@ export default function ThreadPage() {
           }
 `}
         />
-        <Meta property="og:description" content={thread?.[id]?.data?.text} />
+        <Meta
+          property="og:description"
+          content={thread?.[threadId ?? id]?.data?.text ?? ""}
+        />
+
+        <Meta
+          property="og:image"
+          content={thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""}
+        />
 
         <Show when={thread?.[id]} fallback={<p>Loading...</p>}>
           <div class="text-sm breadcrumbs">
