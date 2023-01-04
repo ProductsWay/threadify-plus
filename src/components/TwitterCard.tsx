@@ -28,15 +28,26 @@ export function TwitterCard({
   videoId?: string;
 }) {
   return (
-    <div class="mb-4 w-full text-left card bg-base-100 lg:card-side">
+    <div class="mb-4 w-full text-left card bg-base-100">
+      {videoId && <TwitterVideoPlayer videoId={videoId} />}
+      <div class="card-body">
+        <ConvertUrlToLink text={text} />
+
+        {createdAt && (
+          <div class="justify-end card-actions">
+            {new Date(createdAt).toUTCString()}
+          </div>
+        )}
+      </div>
+
       <Show when={images?.length}>
-        <div class="max-w-xl bg-neutral rounded-box">
-          <div class="w-full carousel">
+        <div class="rounded-box">
+          <div class="carousel">
             <For each={images}>
               {(image) => (
                 <div
                   id={getFilename(image)}
-                  class="relative w-full carousel-item"
+                  class="relative justify-center w-full carousel-item"
                 >
                   <figure>
                     <img class="contain" src={image} alt={image} />
@@ -51,7 +62,7 @@ export function TwitterCard({
                 {(image, index) => (
                   <a
                     href={`#${getFilename(image)}`}
-                    class="btn btn-sm btn-secondary"
+                    class="btn btn-md btn-secondary"
                   >
                     {index.call(index) + 1}
                   </a>
@@ -61,17 +72,6 @@ export function TwitterCard({
           </Show>
         </div>
       </Show>
-
-      {videoId && <TwitterVideoPlayer videoId={videoId} />}
-      <div class="card-body">
-        <ConvertUrlToLink text={text} />
-
-        {createdAt && (
-          <div class="justify-end card-actions">
-            {new Date(createdAt).toUTCString()}
-          </div>
-        )}
-      </div>
     </div>
   );
 }
