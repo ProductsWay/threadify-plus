@@ -35,6 +35,9 @@ export default function ThreadPage() {
   const ids = Array.from(data.latest?.ids ?? []).reverse();
   const threadId = data.latest?.ids?.[data.latest?.ids?.length - 1];
 
+  const name = thread?.[id]?.includes?.users?.[0].name ?? "";
+  const username = thread?.[id]?.includes?.users?.[0].username ?? "";
+  const avatar = thread?.[id]?.includes?.users?.[0].profile_image_url ?? "";
   return (
     <Show when={data()} fallback={<p>Loading...</p>}>
       <script
@@ -45,14 +48,11 @@ export default function ThreadPage() {
       ></script>
       <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
         <SiteTitle>
-          Thread {threadId} by{" "}
-          {thread?.[id]?.includes?.users?.[0].username ?? ""}
+          Thread {threadId} by {name}
         </SiteTitle>
         <Meta
           property="og:title"
-          content={`Thread ${threadId} by ${
-            thread?.[id]?.includes?.users?.[0].username ?? ""
-          }
+          content={`Thread ${threadId} by ${name}
 `}
         />
         <Meta
@@ -60,10 +60,7 @@ export default function ThreadPage() {
           content={thread?.[threadId ?? id]?.data?.text ?? ""}
         />
 
-        <Meta
-          property="og:image"
-          content={thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""}
-        />
+        <Meta property="og:image" content={avatar} />
 
         <Show when={thread?.[id]} fallback={<p>Loading...</p>}>
           <div class="text-sm breadcrumbs">
@@ -74,9 +71,7 @@ export default function ThreadPage() {
               <li>Thread</li>
               <li>
                 <A
-                  href={`https://twitter.com/${
-                    thread?.[id]?.includes?.users?.[0].username ?? ""
-                  }/status/${threadId}`}
+                  href={`https://twitter.com/${username}/status/${threadId}`}
                   target="_blank"
                 >
                   {threadId}
@@ -88,13 +83,7 @@ export default function ThreadPage() {
             id="thread"
             class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center"
           >
-            <UserCard
-              name={thread?.[id]?.includes?.users?.[0].name ?? ""}
-              username={thread?.[id]?.includes?.users?.[0].username ?? ""}
-              picture={
-                thread?.[id]?.includes?.users?.[0].profile_image_url ?? ""
-              }
-            />
+            <UserCard name={name} username={username} picture={avatar} />
 
             <For each={ids}>
               {(currentId) => (
