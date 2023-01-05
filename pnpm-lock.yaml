@@ -8,7 +8,7 @@ specifiers:
   consola: 2.15.3
   daisyui: 2.46.1
   link-preview-js: 3.0.4
-  magic-sdk: 11.0.0
+  magic-sdk: 13.0.0
   postcss: 8.4.20
   solid-js: 1.6.8
   solid-start: 0.2.11
@@ -27,7 +27,7 @@ dependencies:
   consola: 2.15.3
   daisyui: 2.46.1_r4gnkvssmvyxmi2wmat5xbx36a
   link-preview-js: 3.0.4
-  magic-sdk: 11.0.0
+  magic-sdk: 13.0.0
   solid-js: 1.6.8
   solid-start: 0.2.11_hfrm4tqrrzcujjixyttunlyf2u
   solid-start-vercel: 0.2.11_wd4moojhkeyjx5ja7mtof35eie
@@ -1456,22 +1456,22 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@magic-sdk/commons/7.0.1_n3csmhjwmkeq2tmy5jf5pzxpua:
-    resolution: {integrity: sha512-gO5HyzuQTY6XxAnoIBc+v9mY5JOk6pdc6vpAHrFIK9VfeNREVnkABWupl4W42oX+l2BCk6Ii6XtvURibRbSQeQ==}
+  /@magic-sdk/commons/9.0.0_45w7jkquc5ibpkiddpblneqh2y:
+    resolution: {integrity: sha512-+xjBQlZ1vQnoBc7aKqYpKBzbA3JEjSpjlmJo9b+V7M1T/yu6hpHsBcYloIrlN0m0zd/lXyWDgv3o1tceJ4lVRA==}
     peerDependencies:
       '@magic-sdk/provider': '>=4.3.0'
       '@magic-sdk/types': '>=3.1.1'
     dependencies:
-      '@magic-sdk/provider': 11.1.3_localforage@1.10.0
-      '@magic-sdk/types': 10.0.0
+      '@magic-sdk/provider': 13.0.0_localforage@1.10.0
+      '@magic-sdk/types': 11.0.0
     dev: false
 
-  /@magic-sdk/provider/11.1.3_localforage@1.10.0:
-    resolution: {integrity: sha512-gv2xstAat3D3ws95XN6FtKcVoOZI1SKcOFUIv1rPBQdDEUxwRE54qnEAdO+GFjSpSnGazLt6SIxnyVYQK7OgOg==}
+  /@magic-sdk/provider/13.0.0_localforage@1.10.0:
+    resolution: {integrity: sha512-/z5vY2CtHps/XiJTMaVDqI8pndiTNjYPxfK4AHsXaBmKoB+Ro/oNHVqvB0XVHLbgjfmqbKKmK3Lqxf2e3d4S+g==}
     peerDependencies:
       localforage: ^1.7.4
     dependencies:
-      '@magic-sdk/types': 10.0.0
+      '@magic-sdk/types': 11.0.0
       eventemitter3: 4.0.7
       localforage: 1.10.0
       web3-core: 1.5.2
@@ -1479,8 +1479,8 @@ packages:
       - supports-color
     dev: false
 
-  /@magic-sdk/types/10.0.0:
-    resolution: {integrity: sha512-v8vLY1F5YG3LS6V2b3QOpP2MQR4oen0/TTqmrGnBo6UN0odmBglOc0QV4qQOwgdfaJaPCClh9nWHxjRedLFjig==}
+  /@magic-sdk/types/11.0.0:
+    resolution: {integrity: sha512-MOdI4yWpJdOYLrkLpejfyICOuHQQ3RiZ4KUxopIiVt3ySzSP0Po8I1xAaqEDV9eC4vPepY3JQBlRF6f67enT3A==}
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -3078,12 +3078,12 @@ packages:
     dependencies:
       yallist: 3.1.1
 
-  /magic-sdk/11.0.0:
-    resolution: {integrity: sha512-JxqQMuAqrqR95AN7yRSNxFV4o9Ql/hRTRqppdGQA+UqtfbncnUteB6rgQj6NQkr8qrWt/y4r3dgwxISY2wjs7A==}
+  /magic-sdk/13.0.0:
+    resolution: {integrity: sha512-pNYoVpuDynzYXSNejWOul/2wPiXBiI6gMzE5rFHdgL6L591FHZORMEiUZ+ImC3cLbfuTvRb5q4A9v8IUSxXxbw==}
     dependencies:
-      '@magic-sdk/commons': 7.0.1_n3csmhjwmkeq2tmy5jf5pzxpua
-      '@magic-sdk/provider': 11.1.3_localforage@1.10.0
-      '@magic-sdk/types': 10.0.0
+      '@magic-sdk/commons': 9.0.0_45w7jkquc5ibpkiddpblneqh2y
+      '@magic-sdk/provider': 13.0.0_localforage@1.10.0
+      '@magic-sdk/types': 11.0.0
       localforage: 1.10.0
     transitivePeerDependencies:
       - supports-color
