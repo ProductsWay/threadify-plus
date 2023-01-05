@@ -46,6 +46,10 @@ export default function ThreadPage() {
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       ></script>
+      <script
+        type="module"
+        src="https://unpkg.com/sharing-btn@0.1.0/dist/esm/sharing-btn.js"
+      ></script>
       <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
         <SiteTitle>
           Thread {threadId} by {name}
@@ -79,6 +83,14 @@ export default function ThreadPage() {
               </li>
             </ul>
           </div>
+
+          {/** @ts-expect-error use sharing-btn web component */}
+          <sharing-btn
+            url={`https://threadify.productsway.com/thread/${threadId}`}
+            description={`A good thread ${threadId} by ${name}`}
+          >
+            {/** @ts-expect-error use sharing-btn web component */}
+          </sharing-btn>
           <div
             id="thread"
             class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center"
