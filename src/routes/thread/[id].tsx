@@ -39,7 +39,7 @@ export default function ThreadPage() {
   const username = thread?.[id]?.includes?.users?.[0].username ?? "";
   const avatar = thread?.[id]?.includes?.users?.[0].profile_image_url ?? "";
   return (
-    <Show when={data()} fallback={<p>Loading...</p>}>
+    <>
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
@@ -149,6 +149,6 @@ export default function ThreadPage() {
         </svg>
         Save as PDF
       </button>
-    </Show>
+    </>
   );
 }
