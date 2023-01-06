@@ -18,6 +18,8 @@ export function SEO({
       <Meta name="twitter:card" content={content} />
       <Meta name="twitter:title" content={title} />
       <Meta name="twitter:description" content={description} />
+      <Meta property="og:title" content={title} />
+      <Meta property="og:description" content={description} />
       <Meta property="og:image" content={image} />
       <Meta property="og:image:alt" content={content} />
       <Meta property="og:image:width" content="200" />
