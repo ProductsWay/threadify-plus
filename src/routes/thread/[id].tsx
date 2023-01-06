@@ -1,7 +1,8 @@
 import { For, Show } from "solid-js";
-import { A, Meta, RouteDataArgs, useRouteData } from "solid-start";
+import { A, RouteDataArgs, useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
 import { getThreadById } from "~/api-client";
+import { SEO } from "~/components/SEO";
 import SiteTitle from "~/components/SiteTitle";
 import { TwitterCard } from "~/components/TwitterCard";
 import { UserCard } from "~/components/UserCard";
@@ -38,6 +39,12 @@ export default function ThreadPage() {
   const name = thread?.[id]?.includes?.users?.[0].name ?? "";
   const username = thread?.[id]?.includes?.users?.[0].username ?? "";
   const avatar = thread?.[id]?.includes?.users?.[0].profile_image_url ?? "";
+  const content = thread?.[threadId ?? id]?.data?.text ?? "";
+  const iamges =
+    thread?.[threadId ?? id]?.includes?.media
+      ?.filter((item) => item.type === "photo")
+      ?.map((item) => item.url) ?? [];
+
   return (
     <>
       <script
@@ -50,18 +57,12 @@ export default function ThreadPage() {
         <SiteTitle>
           Thread {threadId} by {name}
         </SiteTitle>
-        <Meta
-          property="og:title"
-          content={`Thread ${threadId} by ${name}
-`}
+        <SEO
+          title={`Thread ${threadId} by ${name}`}
+          description={`Thread ${threadId} by ${name}`}
+          image={iamges?.[0] ?? avatar}
+          content={content}
         />
-        <Meta
-          property="og:description"
-          content={thread?.[threadId ?? id]?.data?.text ?? ""}
-        />
-
-        <Meta property="og:image" content={avatar} />
-
         <Show when={thread?.[id]} fallback={<p>Loading...</p>}>
           <div class="text-sm breadcrumbs">
             <ul>
