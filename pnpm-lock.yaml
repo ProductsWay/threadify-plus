@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@auth/core': ^0.2.5
-  '@auth/solid-start': ^0.1.0
+  '@auth/core': 0.2.5
+  '@auth/solid-start': 0.1.0
   '@solidjs/meta': 0.28.2
   '@solidjs/router': 0.6.0
   '@tailwindcss/typography': 0.5.8
@@ -21,7 +21,7 @@ specifiers:
   undici: 5.14.0
   vite: 4.0.4
   wretch: 2.3.0
-  zod: ^3.20.2
+  zod: 3.20.2
 
 dependencies:
   '@auth/core': 0.2.5
