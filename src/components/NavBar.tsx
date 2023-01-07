@@ -34,10 +34,10 @@ export const NavBar: Component<INavBarProps> = () => {
               tabindex="0"
               class="p-2 mt-3 w-52 shadow menu menu-compact dropdown-content bg-base-100 rounded-box"
             >
-              <li>
+              <li class="text-gray-700">
                 <A href="/about">About</A>
               </li>
-              <li>
+              <li class="text-gray-700">
                 <A href="/faq">FAQ</A>
               </li>
             </ul>
