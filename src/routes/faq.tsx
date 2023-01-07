@@ -17,8 +17,16 @@ export default function Faq() {
           <h1 class="text-6xl font-thin text-sky-700">
             Frequently Asked Questions
           </h1>
-          <FrequentlyAskedQuestions />
+          <div class="divider"></div>
+          <p class="py-6">
+            Threadify<sup>+</sup> is a simple and easy-to-use tool that helps
+            users read and share Twitter threads with ease.
+          </p>
+          <A href="/">
+            <button class="btn btn-primary">Get Started</button>
+          </A>
         </div>
+        <FrequentlyAskedQuestions />
       </div>
     </div>
   );
