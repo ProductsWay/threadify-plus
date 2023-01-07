@@ -12,8 +12,8 @@ export default function Faq() {
         content="Threadify+ is a simple and easy-to-use tool that helps users read and share Twitter threads with ease."
       />
 
-      <div class="text-center hero-content">
-        <div class="max-w-xlg">
+      <div class="flex-col text-center md:flex-row hero-content">
+        <div class="w-full">
           <h1 class="text-6xl font-thin text-sky-700">
             Frequently Asked Questions
           </h1>
@@ -26,7 +26,9 @@ export default function Faq() {
             <button class="btn btn-primary">Get Started</button>
           </A>
         </div>
-        <FrequentlyAskedQuestions />
+        <div class="w-full">
+          <FrequentlyAskedQuestions />
+        </div>
       </div>
     </div>
   );

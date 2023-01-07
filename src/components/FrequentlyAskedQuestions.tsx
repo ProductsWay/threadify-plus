@@ -1,6 +1,6 @@
 export function FrequentlyAskedQuestions() {
   return (
-    <div class="p-4 mx-auto mt-12 mb-12 w-full max-w-xl bg-white rounded-lg shadow-md">
+    <div class="p-4 mx-auto mt-12 mb-12 w-full bg-white rounded-lg shadow-md">
       <ol class="mb-4 ml-6 list-decimal text-left">
         <li class="mb-4">
           <h3 class="mb-2 text-xl font-bold">
@@ -25,7 +25,6 @@ export function FrequentlyAskedQuestions() {
             >
               https://github.com/jellydn/threadify-plus
             </a>
-            .
           </p>
         </li>
       </ol>
