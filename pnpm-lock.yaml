@@ -6,11 +6,11 @@ specifiers:
   '@solidjs/meta': 0.28.2
   '@solidjs/router': 0.6.0
   '@tailwindcss/typography': 0.5.9
-  '@types/jsonwebtoken': ^9.0.0
+  '@types/jsonwebtoken': 9.0.0
   autoprefixer: 10.4.13
   consola: 2.15.3
   daisyui: 2.46.1
-  jsonwebtoken: ^9.0.0
+  jsonwebtoken: 9.0.0
   link-preview-js: 3.0.4
   magic-sdk: 13.1.0
   postcss: 8.4.21
