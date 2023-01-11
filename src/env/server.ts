@@ -1,5 +1,6 @@
 import { serverScheme } from "./schema";
 import type { ZodFormattedError } from "zod";
+import logger from "~/logger";
 
 export const formatErrors = (
   errors: ZodFormattedError<Map<string, string>, string>
@@ -14,7 +15,7 @@ export const formatErrors = (
 const env = serverScheme.safeParse(process.env);
 
 if (env.success === false) {
-  console.error(
+  logger.error(
     "❌ Invalid environment variables:\n",
     ...formatErrors(env.error.format())
   );

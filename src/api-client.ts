@@ -1,9 +1,9 @@
 import wretch from "wretch";
-import { serverEnv } from "./env/server";
+import { clientEnv } from "./env/client";
 import logger from "./logger";
 import { TwitterDetail } from "./types";
 
-export const apiClient = wretch(serverEnv.API_URL); // Base url
+const apiClient = wretch(clientEnv.API_URL); // Base url
 
 export const getThreadById = async (id: string, limit = 50) => {
   logger.info("get thread by id", id);
