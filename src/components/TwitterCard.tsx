@@ -13,7 +13,34 @@ const ConvertUrlToLink = ({ text }: { text?: string }) => {
     return `<a class="link" href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
   });
 
-  return <p class="w-full min-w-full text-xl prose" innerHTML={htmlContent} />;
+  // convert @username to link
+  const usernameRegex = /(@[a-z0-9_]+)/gi;
+  const htmlContentWithUsername = htmlContent?.replace(
+    usernameRegex,
+    (username) => {
+      return `<a class="link" href="https://twitter.com/${username.slice(
+        1
+      )}" target="_blank" rel="noopener noreferrer">${username}</a>`;
+    }
+  );
+
+  // convert #hashtag to link
+  const hashtagRegex = /(#\w+)/g;
+  const htmlContentWithHashtag = htmlContentWithUsername?.replace(
+    hashtagRegex,
+    (hashtag) => {
+      return `<a class="link" href="https://twitter.com/hashtag/${hashtag.slice(
+        1
+      )}" target="_blank" rel="noopener noreferrer">${hashtag}</a>`;
+    }
+  );
+
+  return (
+    <p
+      class="w-full min-w-full text-xl prose"
+      innerHTML={htmlContentWithHashtag}
+    />
+  );
 };
 
 export function TwitterCard({
