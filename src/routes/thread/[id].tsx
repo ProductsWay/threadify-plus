@@ -35,7 +35,7 @@ export default function ThreadPage() {
 
   return (
     <>
-      <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
+      <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700">
         <SiteTitle>
           Thread #{threadId} by {name}
         </SiteTitle>

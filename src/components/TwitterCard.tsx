@@ -13,7 +13,7 @@ const ConvertUrlToLink = ({ text }: { text?: string }) => {
     return `<a class="link" href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
   });
 
-  return <p class="w-full min-w-full prose" innerHTML={htmlContent} />;
+  return <p class="w-full min-w-full text-xl prose" innerHTML={htmlContent} />;
 };
 
 export function TwitterCard({
@@ -28,7 +28,7 @@ export function TwitterCard({
   videoId?: string;
 }) {
   return (
-    <div class="mb-4 w-full text-left card bg-base-100">
+    <div class="py-8 mb-4 w-full text-left shadow-lg card bg-base-100">
       {videoId && <TwitterVideoPlayer videoId={videoId} />}
       <div class="py-2 card-body">
         <ConvertUrlToLink text={text} />
