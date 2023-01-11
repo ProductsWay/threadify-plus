@@ -23,10 +23,7 @@ export default function Root() {
       <Head>
         <Title>Threadify+ Reader App</Title>
         <Meta charset="utf-8" />
-        <Meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no"
-        />
+        <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta
           name="description"
           content="Threadify+ is a simple and easy-to-use tool that helps users read and share Twitter threads with ease."
