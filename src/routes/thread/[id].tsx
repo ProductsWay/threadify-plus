@@ -70,8 +70,9 @@ export default function ThreadPage() {
             <UserCard name={name} username={username} picture={avatar} />
 
             <For each={ids}>
-              {(currentId) => (
+              {(currentId, index) => (
                 <TwitterCard
+                  position={`${index.call(index) + 1}/${ids.length}`}
                   createdAt={
                     currentId === id
                       ? thread?.[currentId]?.data.created_at

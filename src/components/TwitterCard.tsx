@@ -17,11 +17,13 @@ const ConvertUrlToLink = ({ text }: { text?: string }) => {
 };
 
 export function TwitterCard({
+  position,
   images = [],
   createdAt,
   text,
   videoId,
 }: {
+  position: string;
   images?: string[];
   createdAt?: Date;
   text?: string;
@@ -29,6 +31,7 @@ export function TwitterCard({
 }) {
   return (
     <div class="py-8 mb-4 w-full text-left shadow-lg card bg-base-100">
+      <span class="badge badge-lg badge-info">{position}</span>
       {videoId && <TwitterVideoPlayer videoId={videoId} />}
       <div class="py-2 card-body">
         <ConvertUrlToLink text={text} />
