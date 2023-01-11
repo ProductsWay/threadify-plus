@@ -37,11 +37,11 @@ export default function ThreadPage() {
     <>
       <div class="container flex flex-col items-center py-8 px-4 mx-auto w-full text-center text-gray-700 shadow-xl">
         <SiteTitle>
-          Thread {threadId} by {name}
+          Thread #{threadId} by {name}
         </SiteTitle>
         <SEO
-          title={`Thread ${threadId} by ${name}`}
-          description={`Thread ${threadId} by ${name}`}
+          title={`Thread #${threadId} by ${name}`}
+          description={content}
           image={iamges?.[0] ?? avatar}
           content={content}
         />
@@ -103,7 +103,7 @@ export default function ThreadPage() {
           ></script>
           {/** @ts-expect-error use sharing-btn web component */}
           <sharing-btn
-            url={`https://threadify.productsway.com/thread/${threadId}`}
+            url={`https://threadify.productsway.com/thread/${id}`}
             description={`A good thread ${threadId} by ${name}`}
           >
             {/** @ts-expect-error use sharing-btn web component */}
