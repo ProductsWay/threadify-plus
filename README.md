@@ -38,13 +38,13 @@ Minimum Viable Product (MVP) features:
 
 ![https://gyazo.com/edba4885e64111bb302c41dac0bdcac3.gif](https://gyazo.com/edba4885e64111bb302c41dac0bdcac3.gif)
 
-- [ ] Bookmark and share: Users can bookmark their favorite threads and share them with others.
-
 - [x] Responsive design: Threadify is designed to be responsive and work seamlessly on desktop and mobile devices.
 
 ![https://gyazo.com/3ebc70fb37ccc874620d8b26376194d3.gif](https://gyazo.com/3ebc70fb37ccc874620d8b26376194d3.gif)
 
+- [ ] Bookmark and share: Users can bookmark their favorite threads and share them with others.
 - [ ] User-friendly interface: Threadify has a clean and intuitive interface that makes it easy for users to navigate and use the app.
+- [ ] Export as PDF with [PDFGen](https://pdfgen.app/)
 
 These MVP features will provide users with a valuable tool for enhancing their Twitter experience and staying connected with their network.
 
