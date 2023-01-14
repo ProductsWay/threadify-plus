@@ -27,7 +27,8 @@ export default function ThreadPage() {
   const name = thread?.[id]?.includes?.users?.[0].name ?? "";
   const username = thread?.[id]?.includes?.users?.[0].username ?? "";
   const avatar = thread?.[id]?.includes?.users?.[0].profile_image_url ?? "";
-  const content = thread?.[threadId ?? id]?.data?.text ?? "";
+  const content =
+    thread?.[threadId ?? id]?.data?.text ?? `A good thread by ${name}`;
   const iamges =
     thread?.[threadId ?? id]?.includes?.media
       ?.filter((item) => item.type === "photo")
@@ -105,7 +106,7 @@ export default function ThreadPage() {
           {/** @ts-expect-error use sharing-btn web component */}
           <sharing-btn
             url={`https://threadify.productsway.com/thread/${id}`}
-            description={`A good thread ${threadId} by ${name}`}
+            description={content}
             to="facebook,email,linkedin,telegram"
           >
             {/** @ts-expect-error use sharing-btn web component */}
