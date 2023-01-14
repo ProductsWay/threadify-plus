@@ -100,12 +100,13 @@ export default function ThreadPage() {
           <script
             async
             type="module"
-            src="https://unpkg.com/sharing-btn@0.1.0/dist/esm/sharing-btn.js"
+            src="https://unpkg.com/sharing-btn@0.1.2/dist/esm/sharing-btn.js"
           ></script>
           {/** @ts-expect-error use sharing-btn web component */}
           <sharing-btn
             url={`https://threadify.productsway.com/thread/${id}`}
             description={`A good thread ${threadId} by ${name}`}
+            to="facebook,email,linkedin,telegram"
           >
             {/** @ts-expect-error use sharing-btn web component */}
           </sharing-btn>
