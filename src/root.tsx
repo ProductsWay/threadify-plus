@@ -39,6 +39,7 @@ export default function Root() {
           async
           src="//gc.zgo.at/count.js"
         ></script>
+        <script async defer src="https://analytics.umami.is/script.js" data-website-id="6d454ee0-c8fb-4223-a67b-892d75d03523"></script>
       </Head>
       <Body>
         <Suspense>
