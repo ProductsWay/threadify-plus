@@ -20,7 +20,7 @@ specifiers:
   typescript: 4.9.4
   undici: 5.15.1
   vite: 4.0.4
-  wretch: 2.4.0
+  wretch: 2.4.1
   zod: 3.20.2
 
 dependencies:
@@ -36,7 +36,7 @@ dependencies:
   solid-start: 0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq
   solid-start-vercel: 0.2.16_zavuemlshyizacqxwcsdo5dayi
   undici: 5.15.1
-  wretch: 2.4.0
+  wretch: 2.4.1
   zod: 3.20.2
 
 devDependencies:
@@ -3275,8 +3275,8 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  /wretch/2.4.0:
-    resolution: {integrity: sha512-JvhDSmNR+wKm+Yzmde7vFcSsHWSpltVOo+nLxmkB9/4Dtt028OYLipxTzXFnyXlPgN6upFs4wvuVNHKA2DtxUQ==}
+  /wretch/2.4.1:
+    resolution: {integrity: sha512-jHJFJ968p/JNVrTZ+gJ1vZekk+3EkDsYHwamHLR+xMKur9vBv8lhBe2+XENbXQtygdO0JGtjRJeKc9xiuwW6lQ==}
     engines: {node: '>=14'}
     dev: false
 
