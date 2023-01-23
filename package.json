@@ -27,7 +27,7 @@
     "solid-js": "1.6.9",
     "solid-start": "0.2.16",
     "solid-start-vercel": "0.2.16",
-    "undici": "5.15.2",
+    "undici": "5.16.0",
     "wretch": "2.4.1",
     "zod": "3.20.2"
   },
