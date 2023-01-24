@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@auth/core': 0.2.5
+  '@auth/core': 0.3.0
   '@auth/solid-start': 0.1.0
   '@solidjs/meta': 0.28.2
   '@solidjs/router': 0.7.0
@@ -24,8 +24,8 @@ specifiers:
   zod: 3.20.2
 
 dependencies:
-  '@auth/core': 0.2.5
-  '@auth/solid-start': 0.1.0_hofitrqpm3gglirk3x4gjgvngu
+  '@auth/core': 0.3.0
+  '@auth/solid-start': 0.1.0_r7glndekh4yfgrq4glgpz2xvra
   '@solidjs/meta': 0.28.2_solid-js@1.6.9
   '@solidjs/router': 0.7.0_solid-js@1.6.9
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -60,8 +60,8 @@ packages:
   /@antfu/utils/0.7.2:
     resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
 
-  /@auth/core/0.2.5:
-    resolution: {integrity: sha512-e9jQOW6kSnxa0gfeR5neqLIDAUvZtyGTh3YpO2eN5F/5gBybE582M5e34rXlJKj+/tAgf+oYBJAY5CUxGTY9tw==}
+  /@auth/core/0.3.0:
+    resolution: {integrity: sha512-4bmPzEiQKSXD825Jrcgj7igSFghBTpkSQ6U/jnYABJRQGhwnWJ/q9FHxEo6SGZWvYvpjOrvJOWhrP4Xng4CGUQ==}
     peerDependencies:
       nodemailer: 6.8.0
     peerDependenciesMeta:
@@ -76,14 +76,14 @@ packages:
       preact-render-to-string: 5.2.3_preact@10.11.3
     dev: false
 
-  /@auth/solid-start/0.1.0_hofitrqpm3gglirk3x4gjgvngu:
+  /@auth/solid-start/0.1.0_r7glndekh4yfgrq4glgpz2xvra:
     resolution: {integrity: sha512-nQHDWrP3c7uML0p+vKtGwun+CJh6TyloB8rOcwcZRtKRTRVK879ZCvxKa9pRExyZzQ8KCc+2K3+doQzxawblUg==}
     peerDependencies:
       '@auth/core': ~0.2.2 || ^0.2.2
       solid-js: ^1.5.7
       solid-start: ^0.2.1
     dependencies:
-      '@auth/core': 0.2.5
+      '@auth/core': 0.3.0
       set-cookie-parser: 2.5.1
       solid-js: 1.6.9
       solid-start: 0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq
