@@ -13,9 +13,9 @@ specifiers:
   jsonwebtoken: 9.0.0
   postcss: 8.4.21
   solid-js: 1.6.9
-  solid-start: 0.2.16
-  solid-start-node: 0.2.16
-  solid-start-vercel: 0.2.16
+  solid-start: 0.2.17
+  solid-start-node: 0.2.17
+  solid-start-vercel: 0.2.17
   tailwindcss: 3.2.4
   typescript: 4.9.4
   undici: 5.16.0
@@ -25,7 +25,7 @@ specifiers:
 
 dependencies:
   '@auth/core': 0.3.0
-  '@auth/solid-start': 0.1.0_r7glndekh4yfgrq4glgpz2xvra
+  '@auth/solid-start': 0.1.0_oruudjinvnoql2wbof3vncl4oa
   '@solidjs/meta': 0.28.2_solid-js@1.6.9
   '@solidjs/router': 0.7.0_solid-js@1.6.9
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -33,8 +33,8 @@ dependencies:
   daisyui: 2.49.0_gbtt6ss3tbiz4yjtvdr6fbrj44
   jsonwebtoken: 9.0.0
   solid-js: 1.6.9
-  solid-start: 0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq
-  solid-start-vercel: 0.2.16_zavuemlshyizacqxwcsdo5dayi
+  solid-start: 0.2.17_5u5qyhijp2ewdgjt5mu45hdgyq
+  solid-start-vercel: 0.2.17_7nlqda3eqdmlscq4vk2pp77dpu
   undici: 5.16.0
   wretch: 2.4.1
   zod: 3.20.2
@@ -43,7 +43,7 @@ devDependencies:
   '@types/jsonwebtoken': 9.0.1
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
-  solid-start-node: 0.2.16_x6yr7zg5vouej5zubu7gwoyp3m
+  solid-start-node: 0.2.17_a2f5ptxtizw7nyv3sjrz67tunm
   tailwindcss: 3.2.4_postcss@8.4.21
   typescript: 4.9.4
   vite: 4.0.4
@@ -76,7 +76,7 @@ packages:
       preact-render-to-string: 5.2.3_preact@10.11.3
     dev: false
 
-  /@auth/solid-start/0.1.0_r7glndekh4yfgrq4glgpz2xvra:
+  /@auth/solid-start/0.1.0_oruudjinvnoql2wbof3vncl4oa:
     resolution: {integrity: sha512-nQHDWrP3c7uML0p+vKtGwun+CJh6TyloB8rOcwcZRtKRTRVK879ZCvxKa9pRExyZzQ8KCc+2K3+doQzxawblUg==}
     peerDependencies:
       '@auth/core': ~0.2.2 || ^0.2.2
@@ -86,7 +86,7 @@ packages:
       '@auth/core': 0.3.0
       set-cookie-parser: 2.5.1
       solid-js: 1.6.9
-      solid-start: 0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq
+      solid-start: 0.2.17_5u5qyhijp2ewdgjt5mu45hdgyq
     dev: false
 
   /@babel/code-frame/7.18.6:
@@ -1457,21 +1457,29 @@ packages:
       '@rollup/pluginutils': 5.0.2_rollup@3.12.0
       rollup: 3.12.0
 
-  /@rollup/plugin-node-resolve/15.0.1_rollup@3.12.0:
-    resolution: {integrity: sha512-ReY88T7JhJjeRVbfCyNj+NXAG3IIsVMsX9b5/9jC98dRP8/yxlZdz7mHZbHk5zHr24wZZICS5AcXsFZAXYUQEg==}
-    engines: {node: '>=14.0.0'}
+  /@rollup/plugin-node-resolve/13.3.0_rollup@3.12.0:
+    resolution: {integrity: sha512-Lus8rbUo1eEcnS4yTFKLZrVumLPY+YayBdWXgFSHYhTT2iJbMhoaaBL3xl5NCdeRytErGr8tZ0L71BMRmnlwSw==}
+    engines: {node: '>= 10.0.0'}
     peerDependencies:
-      rollup: ^2.78.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
+      rollup: ^2.42.0
     dependencies:
-      '@rollup/pluginutils': 5.0.2_rollup@3.12.0
-      '@types/resolve': 1.20.2
+      '@rollup/pluginutils': 3.1.0_rollup@3.12.0
+      '@types/resolve': 1.17.1
       deepmerge: 4.3.0
       is-builtin-module: 3.2.0
       is-module: 1.0.0
       resolve: 1.22.1
+      rollup: 3.12.0
+
+  /@rollup/pluginutils/3.1.0_rollup@3.12.0:
+    resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      '@types/estree': 0.0.39
+      estree-walker: 1.0.1
+      picomatch: 2.3.1
       rollup: 3.12.0
 
   /@rollup/pluginutils/5.0.2_rollup@3.12.0:
@@ -1528,6 +1536,9 @@ packages:
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
 
+  /@types/estree/0.0.39:
+    resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
+
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
 
@@ -1539,10 +1550,11 @@ packages:
 
   /@types/node/18.11.18:
     resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
-    dev: true
 
-  /@types/resolve/1.20.2:
-    resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+  /@types/resolve/1.17.1:
+    resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
+    dependencies:
+      '@types/node': 18.11.18
 
   /accepts/1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -2194,6 +2206,9 @@ packages:
   /escape-string-regexp/1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
     engines: {node: '>=0.8.0'}
+
+  /estree-walker/1.0.1:
+    resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
 
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
@@ -2907,8 +2922,8 @@ packages:
       '@babel/types': 7.20.7
       solid-js: 1.6.9
 
-  /solid-start-node/0.2.16_x6yr7zg5vouej5zubu7gwoyp3m:
-    resolution: {integrity: sha512-kOxrBl1G18Y9z3KDr/ZMnJhUQDe9PhmkxaXbKxYRxtyG1hW7ZeAw49Hw8fPVLX+CbQVA6Zq8Mv1SUXA41Ct2IA==}
+  /solid-start-node/0.2.17_a2f5ptxtizw7nyv3sjrz67tunm:
+    resolution: {integrity: sha512-DRVKO9Tyd3PL6L4/1CGRBIHvDz6QutEqUdtGMud7U2+JG9kjczwoX1/guemrq/hpRMsvO/f/lXSccXvoUKHiqg==}
     peerDependencies:
       solid-start: '*'
       undici: ^5.8.0
@@ -2916,12 +2931,12 @@ packages:
     dependencies:
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.12.0
       '@rollup/plugin-json': 6.0.0_rollup@3.12.0
-      '@rollup/plugin-node-resolve': 15.0.1_rollup@3.12.0
+      '@rollup/plugin-node-resolve': 13.3.0_rollup@3.12.0
       compression: 1.7.4
       polka: 1.0.0-next.22
       rollup: 3.12.0
       sirv: 2.0.2
-      solid-start: 0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq
+      solid-start: 0.2.17_5u5qyhijp2ewdgjt5mu45hdgyq
       terser: 5.16.1
       undici: 5.16.0
       vite: 4.0.4
@@ -2929,23 +2944,23 @@ packages:
       - supports-color
     dev: true
 
-  /solid-start-vercel/0.2.16_zavuemlshyizacqxwcsdo5dayi:
-    resolution: {integrity: sha512-U98hazVHCLGWIv1MeeIgmIL0bBefkuLOITm564br4qY8GJM0NOjuRFnoWBbQpooq44IQA6jp8/5DftN1VI7BZA==}
+  /solid-start-vercel/0.2.17_7nlqda3eqdmlscq4vk2pp77dpu:
+    resolution: {integrity: sha512-Wfjws1zfsjq1lUdC4dLaHfrKOyREukPQD51PPTrzqTpWVwtTKXpFemop8Ve45/yQ52x9XSHu22gCb3Pbsox/fg==}
     peerDependencies:
       solid-start: '*'
       vite: '*'
     dependencies:
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.12.0
       '@rollup/plugin-json': 6.0.0_rollup@3.12.0
-      '@rollup/plugin-node-resolve': 15.0.1_rollup@3.12.0
+      '@rollup/plugin-node-resolve': 13.3.0_rollup@3.12.0
       rollup: 3.12.0
-      solid-start: 0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq
+      solid-start: 0.2.17_5u5qyhijp2ewdgjt5mu45hdgyq
       terser: 5.16.1
       vite: 4.0.4
     dev: false
 
-  /solid-start/0.2.16_5u5qyhijp2ewdgjt5mu45hdgyq:
-    resolution: {integrity: sha512-gkc14UFGBWF61qPu3nGVaB/wWKzX0r46BiOmwuMqIDJKpWAiOjzd+wDPGQOLkzVuobVGGFFcTbIUBvVZRUZ/qw==}
+  /solid-start/0.2.17_5u5qyhijp2ewdgjt5mu45hdgyq:
+    resolution: {integrity: sha512-zo4wI+dWzvXblM50xO9MvfoMGeAwpCRp3xcFlgHZmaQP6LrhhFj/e8/VfxOB974zyV3QBZxDWD8rdvRLEz0t7g==}
     hasBin: true
     peerDependencies:
       '@solidjs/meta': ^0.28.0
