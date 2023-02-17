@@ -19,7 +19,7 @@ specifiers:
   tailwindcss: 3.2.7
   typescript: 4.9.5
   undici: 5.19.1
-  vite: 4.1.1
+  vite: 4.1.2
   wretch: 2.4.1
   zod: 3.20.6
 
@@ -33,8 +33,8 @@ dependencies:
   daisyui: 2.50.1_gbtt6ss3tbiz4yjtvdr6fbrj44
   jsonwebtoken: 9.0.0
   solid-js: 1.6.11
-  solid-start: 0.2.21_67ey3msxeibrxuo7hc4yinijty
-  solid-start-vercel: 0.2.21_6v6c5nklynynrzf4ewxow73nai
+  solid-start: 0.2.21_gjuylenmsj23tjovitwvg5bmfy
+  solid-start-vercel: 0.2.21_q7dqrxvc3wet2orzwf3shn6tue
   undici: 5.19.1
   wretch: 2.4.1
   zod: 3.20.6
@@ -43,10 +43,10 @@ devDependencies:
   '@types/jsonwebtoken': 9.0.1
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
-  solid-start-node: 0.2.21_nwx5gb6mgohr7zuxnwwjd3cj6u
+  solid-start-node: 0.2.21_mwykkt2qdwq3cewjwd624tafjm
   tailwindcss: 3.2.7_postcss@8.4.21
   typescript: 4.9.5
-  vite: 4.1.1
+  vite: 4.1.2
 
 packages:
 
@@ -86,7 +86,7 @@ packages:
       '@auth/core': 0.4.0
       set-cookie-parser: 2.5.1
       solid-js: 1.6.11
-      solid-start: 0.2.21_67ey3msxeibrxuo7hc4yinijty
+      solid-start: 0.2.21_gjuylenmsj23tjovitwvg5bmfy
     dev: false
 
   /@babel/code-frame/7.18.6:
@@ -3157,7 +3157,7 @@ packages:
       '@babel/types': 7.20.7
       solid-js: 1.6.11
 
-  /solid-start-node/0.2.21_nwx5gb6mgohr7zuxnwwjd3cj6u:
+  /solid-start-node/0.2.21_mwykkt2qdwq3cewjwd624tafjm:
     resolution: {integrity: sha512-DmmJT6K+uF0yLPkn1GQvIHmZRUdYlQwBijruvCiEWuy3d1sLedRnP22K/+u9eKqm8ruFOTQHrc/1wuGVcj3JXg==}
     peerDependencies:
       solid-start: '*'
@@ -3171,14 +3171,14 @@ packages:
       polka: 1.0.0-next.22
       rollup: 3.15.0
       sirv: 2.0.2
-      solid-start: 0.2.21_67ey3msxeibrxuo7hc4yinijty
+      solid-start: 0.2.21_gjuylenmsj23tjovitwvg5bmfy
       terser: 5.16.3
       undici: 5.19.1
-      vite: 4.1.1
+      vite: 4.1.2
     transitivePeerDependencies:
       - supports-color
 
-  /solid-start-vercel/0.2.21_6v6c5nklynynrzf4ewxow73nai:
+  /solid-start-vercel/0.2.21_q7dqrxvc3wet2orzwf3shn6tue:
     resolution: {integrity: sha512-MERfexAGrvGOePeesqXB1vaHgYfyVZvyunQvGB1OcRPQ7i1oqs3hWJ+bLm24RopOnb5GeQpSCVB2caxsoHmhRg==}
     peerDependencies:
       solid-start: '*'
@@ -3191,14 +3191,14 @@ packages:
       fast-glob: 3.2.12
       micromatch: 4.0.5
       rollup: 3.15.0
-      solid-start: 0.2.21_67ey3msxeibrxuo7hc4yinijty
+      solid-start: 0.2.21_gjuylenmsj23tjovitwvg5bmfy
       terser: 5.16.3
-      vite: 4.1.1
+      vite: 4.1.2
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  /solid-start/0.2.21_67ey3msxeibrxuo7hc4yinijty:
+  /solid-start/0.2.21_gjuylenmsj23tjovitwvg5bmfy:
     resolution: {integrity: sha512-igh1vI6d8sBm9BeGGcJOE7ewEOSlhzmL3f4iVX0bg5oz+9xtqAf1EA0MvNkTLTvq5YKsVKYy80oJmm/xg0F8jw==}
     hasBin: true
     peerDependencies:
@@ -3261,13 +3261,13 @@ packages:
       set-cookie-parser: 2.5.1
       sirv: 2.0.2
       solid-js: 1.6.11
-      solid-start-node: 0.2.21_nwx5gb6mgohr7zuxnwwjd3cj6u
-      solid-start-vercel: 0.2.21_6v6c5nklynynrzf4ewxow73nai
+      solid-start-node: 0.2.21_mwykkt2qdwq3cewjwd624tafjm
+      solid-start-vercel: 0.2.21_q7dqrxvc3wet2orzwf3shn6tue
       terser: 5.16.3
       undici: 5.19.1
-      vite: 4.1.1
-      vite-plugin-inspect: 0.7.15_rollup@3.15.0+vite@4.1.1
-      vite-plugin-solid: 2.5.0_solid-js@1.6.11+vite@4.1.1
+      vite: 4.1.2
+      vite-plugin-inspect: 0.7.15_rollup@3.15.0+vite@4.1.2
+      vite-plugin-solid: 2.5.0_solid-js@1.6.11+vite@4.1.2
       wait-on: 6.0.1_debug@4.3.4
     transitivePeerDependencies:
       - supports-color
@@ -3473,7 +3473,7 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  /vite-plugin-inspect/0.7.15_rollup@3.15.0+vite@4.1.1:
+  /vite-plugin-inspect/0.7.15_rollup@3.15.0+vite@4.1.2:
     resolution: {integrity: sha512-oxeZCljacA/slhGFbDNlBqdhDU9fgdHL84i7Nz7DnaAIE7DhTiW2djanw3d/BKuZtduKUY82vRUQ4iaG917t2A==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3486,12 +3486,12 @@ packages:
       kolorist: 1.7.0
       sirv: 2.0.2
       ufo: 1.0.1
-      vite: 4.1.1
+      vite: 4.1.2
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  /vite-plugin-solid/2.5.0_solid-js@1.6.11+vite@4.1.1:
+  /vite-plugin-solid/2.5.0_solid-js@1.6.11+vite@4.1.2:
     resolution: {integrity: sha512-VneGd3RyFJvwaiffsqgymeMaofn0IzQLPwDzafTV2f1agoWeeJlk5VrI5WqT9BTtLe69vNNbCJWqLhHr9fOdDw==}
     peerDependencies:
       solid-js: ^1.3.17 || ^1.4.0 || ^1.5.0 || ^1.6.0
@@ -3503,13 +3503,13 @@ packages:
       merge-anything: 5.1.4
       solid-js: 1.6.11
       solid-refresh: 0.4.3_solid-js@1.6.11
-      vite: 4.1.1
-      vitefu: 0.2.4_vite@4.1.1
+      vite: 4.1.2
+      vitefu: 0.2.4_vite@4.1.2
     transitivePeerDependencies:
       - supports-color
 
-  /vite/4.1.1:
-    resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==}
+  /vite/4.1.2:
+    resolution: {integrity: sha512-MWDb9Rfy3DI8omDQySbMK93nQqStwbsQWejXRY2EBzEWKmLAXWb1mkI9Yw2IJrc+oCvPCI1Os5xSSIBYY6DEAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3540,7 +3540,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitefu/0.2.4_vite@4.1.1:
+  /vitefu/0.2.4_vite@4.1.2:
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -3548,7 +3548,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.1.1
+      vite: 4.1.2
 
   /wait-on/6.0.1_debug@4.3.4:
     resolution: {integrity: sha512-zht+KASY3usTY5u2LgaNqn/Cd8MukxLGjdcZxT2ns5QzDmTFc4XoWBgC+C/na+sMRZTuVygQoMYwdcVjHnYIVw==}
