@@ -25,7 +25,7 @@ export function TwitterVideoPlayer({ videoId }: { videoId: string }) {
   return (
     <Show when={video()}>
       <div class="px-4 mx-auto max-w-5xl card">
-        <video class="mb-2 video" autoplay controls>
+        <video class="mb-2 video" controls>
           <source src={video.latest?.meta["og:video"]} type="video/mp4" />
         </video>
 
