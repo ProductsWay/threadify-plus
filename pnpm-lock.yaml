@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@auth/core': 0.4.0
-  '@auth/solid-start': 0.1.0
+  '@auth/core': 0.5.0
+  '@auth/solid-start': 0.1.1
   '@solidjs/meta': 0.28.2
   '@solidjs/router': 0.7.0
   '@tailwindcss/typography': 0.5.9
@@ -13,9 +13,9 @@ specifiers:
   jsonwebtoken: 9.0.0
   postcss: 8.4.21
   solid-js: 1.6.11
-  solid-start: 0.2.21
-  solid-start-node: 0.2.21
-  solid-start-vercel: 0.2.21
+  solid-start: 0.2.22
+  solid-start-node: 0.2.22
+  solid-start-vercel: 0.2.22
   tailwindcss: 3.2.7
   typescript: 4.9.5
   undici: 5.20.0
@@ -24,8 +24,8 @@ specifiers:
   zod: 3.20.6
 
 dependencies:
-  '@auth/core': 0.4.0
-  '@auth/solid-start': 0.1.0_tcneqt72h6vgehzzwtwa6gcsia
+  '@auth/core': 0.5.0
+  '@auth/solid-start': 0.1.1_p36yehyst6zuriq6jt5edvlkc4
   '@solidjs/meta': 0.28.2_solid-js@1.6.11
   '@solidjs/router': 0.7.0_solid-js@1.6.11
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
@@ -33,8 +33,8 @@ dependencies:
   daisyui: 2.51.0_gbtt6ss3tbiz4yjtvdr6fbrj44
   jsonwebtoken: 9.0.0
   solid-js: 1.6.11
-  solid-start: 0.2.21_as4fuftdbgkg2xxvulqtgmhj3a
-  solid-start-vercel: 0.2.21_ljfrghcei5xg44nuq2qrppttyi
+  solid-start: 0.2.22_gqfaputkq2jqm75tblm2mef4ve
+  solid-start-vercel: 0.2.22_wuiowtpworfjg7n2vbvba37nn4
   undici: 5.20.0
   wretch: 2.5.0
   zod: 3.20.6
@@ -43,7 +43,7 @@ devDependencies:
   '@types/jsonwebtoken': 9.0.1
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
-  solid-start-node: 0.2.21_ambcveqsjb6akaydkkifizrgwi
+  solid-start-node: 0.2.22_ppwjshleycygoco43sslduznmy
   tailwindcss: 3.2.7_postcss@8.4.21
   typescript: 4.9.5
   vite: 4.1.4
@@ -60,8 +60,8 @@ packages:
   /@antfu/utils/0.7.2:
     resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
 
-  /@auth/core/0.4.0:
-    resolution: {integrity: sha512-wHVljvVGPmKSjlxQUYZCOL4GGe26YqhT351sA2REE43YskaqRMYh1TVjBxpXcdG8/P8bw2DsHgl+aBEV3P5+KQ==}
+  /@auth/core/0.5.0:
+    resolution: {integrity: sha512-NZu+H1rfYPewBDelZ4nZn7Vd2i6kVSUZQAcrQtEYylbSVVpVglcAfnHDq0FsIFXN1czQk13qdmm+CbIEr/C+iA==}
     peerDependencies:
       nodemailer: ^6.8.0
     peerDependenciesMeta:
@@ -76,17 +76,16 @@ packages:
       preact-render-to-string: 5.2.3_preact@10.11.3
     dev: false
 
-  /@auth/solid-start/0.1.0_tcneqt72h6vgehzzwtwa6gcsia:
-    resolution: {integrity: sha512-nQHDWrP3c7uML0p+vKtGwun+CJh6TyloB8rOcwcZRtKRTRVK879ZCvxKa9pRExyZzQ8KCc+2K3+doQzxawblUg==}
+  /@auth/solid-start/0.1.1_p36yehyst6zuriq6jt5edvlkc4:
+    resolution: {integrity: sha512-WMWBH/RbQTs5oFBoOjtJgKKZv3QlZQkyiAj1UnKWJ2+3UbuNQAhDBM4ppZD54CdbF/Wb1LVXjUNI6LBbopUK6g==}
     peerDependencies:
       '@auth/core': ~0.2.2 || ^0.2.2
       solid-js: ^1.5.7
-      solid-start: ^0.2.1
+      solid-start: ^0.2.14
     dependencies:
-      '@auth/core': 0.4.0
-      set-cookie-parser: 2.5.1
+      '@auth/core': 0.5.0
       solid-js: 1.6.11
-      solid-start: 0.2.21_as4fuftdbgkg2xxvulqtgmhj3a
+      solid-start: 0.2.22_gqfaputkq2jqm75tblm2mef4ve
     dev: false
 
   /@babel/code-frame/7.18.6:
@@ -2571,6 +2570,7 @@ packages:
 
   /joi/17.8.1:
     resolution: {integrity: sha512-Zoafe6E2kQ+hkkJQSBnOxA8beb2LF33keCxZP3vSy7qTHj9/2GAEQ9KLwfe+PR35WvspwNz0jWajDIHLnCKfpg==}
+    deprecated: this package has been deprecated
     dependencies:
       '@hapi/address': 5.1.0
       '@hapi/formula': 3.0.2
@@ -3163,8 +3163,8 @@ packages:
       '@babel/types': 7.20.7
       solid-js: 1.6.11
 
-  /solid-start-node/0.2.21_ambcveqsjb6akaydkkifizrgwi:
-    resolution: {integrity: sha512-DmmJT6K+uF0yLPkn1GQvIHmZRUdYlQwBijruvCiEWuy3d1sLedRnP22K/+u9eKqm8ruFOTQHrc/1wuGVcj3JXg==}
+  /solid-start-node/0.2.22_ppwjshleycygoco43sslduznmy:
+    resolution: {integrity: sha512-BOLYzp9mkBRs2CvhFLxz66J1hlyxZoJd2x6BT9pKitm3qdbyTZTm0mLsMchgMNsXTBTxnhXOMATe3lectsV7fA==}
     peerDependencies:
       solid-start: '*'
       undici: ^5.8.0
@@ -3177,15 +3177,15 @@ packages:
       polka: 1.0.0-next.22
       rollup: 3.17.1
       sirv: 2.0.2
-      solid-start: 0.2.21_as4fuftdbgkg2xxvulqtgmhj3a
+      solid-start: 0.2.22_gqfaputkq2jqm75tblm2mef4ve
       terser: 5.16.4
       undici: 5.20.0
       vite: 4.1.4
     transitivePeerDependencies:
       - supports-color
 
-  /solid-start-vercel/0.2.21_ljfrghcei5xg44nuq2qrppttyi:
-    resolution: {integrity: sha512-MERfexAGrvGOePeesqXB1vaHgYfyVZvyunQvGB1OcRPQ7i1oqs3hWJ+bLm24RopOnb5GeQpSCVB2caxsoHmhRg==}
+  /solid-start-vercel/0.2.22_wuiowtpworfjg7n2vbvba37nn4:
+    resolution: {integrity: sha512-3zL7JdCBbK4ugSOlyHUaFbiPERVIlR+IjjhUgNTeOKucqfQLNBDdGgguUhjZZ5i/iUc6wa6LyNAgr+0gd+y6RA==}
     peerDependencies:
       solid-start: '*'
       vite: '*'
@@ -3197,15 +3197,15 @@ packages:
       fast-glob: 3.2.12
       micromatch: 4.0.5
       rollup: 3.17.1
-      solid-start: 0.2.21_as4fuftdbgkg2xxvulqtgmhj3a
+      solid-start: 0.2.22_gqfaputkq2jqm75tblm2mef4ve
       terser: 5.16.4
       vite: 4.1.4
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  /solid-start/0.2.21_as4fuftdbgkg2xxvulqtgmhj3a:
-    resolution: {integrity: sha512-igh1vI6d8sBm9BeGGcJOE7ewEOSlhzmL3f4iVX0bg5oz+9xtqAf1EA0MvNkTLTvq5YKsVKYy80oJmm/xg0F8jw==}
+  /solid-start/0.2.22_gqfaputkq2jqm75tblm2mef4ve:
+    resolution: {integrity: sha512-9SfYRNyXUMzNVBx13nzuOqAGGJdsSG1E6gIM3CRDl0x85Nt+1zQTm74rRsBVMecI2EgI0gFOUEKFVM/dP4x8yA==}
     hasBin: true
     peerDependencies:
       '@solidjs/meta': ^0.28.0
@@ -3267,8 +3267,8 @@ packages:
       set-cookie-parser: 2.5.1
       sirv: 2.0.2
       solid-js: 1.6.11
-      solid-start-node: 0.2.21_ambcveqsjb6akaydkkifizrgwi
-      solid-start-vercel: 0.2.21_ljfrghcei5xg44nuq2qrppttyi
+      solid-start-node: 0.2.22_ppwjshleycygoco43sslduznmy
+      solid-start-vercel: 0.2.22_wuiowtpworfjg7n2vbvba37nn4
       terser: 5.16.4
       undici: 5.20.0
       vite: 4.1.4
