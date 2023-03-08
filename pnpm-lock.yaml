@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@auth/core': 0.5.0
   '@auth/solid-start': 0.1.1
-  '@openreplay/tracker': ^5.0.0
+  '@openreplay/tracker': 5.0.0
   '@solidjs/meta': 0.28.2
   '@solidjs/router': 0.7.0
   '@tailwindcss/typography': 0.5.9
