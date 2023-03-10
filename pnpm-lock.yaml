@@ -5,7 +5,7 @@ specifiers:
   '@auth/solid-start': 0.1.1
   '@openreplay/tracker': 5.0.0
   '@solidjs/meta': 0.28.2
-  '@solidjs/router': 0.7.0
+  '@solidjs/router': 0.8.0
   '@tailwindcss/typography': 0.5.9
   '@types/jsonwebtoken': 9.0.1
   autoprefixer: 10.4.14
@@ -29,13 +29,13 @@ dependencies:
   '@auth/solid-start': 0.1.1_xzx72cbrzra4nwtqr25seiob4y
   '@openreplay/tracker': 5.0.0
   '@solidjs/meta': 0.28.2_solid-js@1.6.13
-  '@solidjs/router': 0.7.0_solid-js@1.6.13
+  '@solidjs/router': 0.8.0_solid-js@1.6.13
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   consola: 2.15.3
   daisyui: 2.51.3_j7yt3jd32cwenjqavrrga47yr4
   jsonwebtoken: 9.0.0
   solid-js: 1.6.13
-  solid-start: 0.2.23_k342hytlp5zecshzhwb6byv654
+  solid-start: 0.2.23_jadobgo2tlpvbvwmonxhe7mota
   solid-start-vercel: 0.2.23_if7ohanqzn44ptg5rbhz3hdfky
   undici: 5.20.0
   wretch: 2.5.1
@@ -87,7 +87,7 @@ packages:
     dependencies:
       '@auth/core': 0.5.1
       solid-js: 1.6.13
-      solid-start: 0.2.23_k342hytlp5zecshzhwb6byv654
+      solid-start: 0.2.23_jadobgo2tlpvbvwmonxhe7mota
     dev: false
 
   /@babel/code-frame/7.18.6:
@@ -1550,8 +1550,8 @@ packages:
     dependencies:
       solid-js: 1.6.13
 
-  /@solidjs/router/0.7.0_solid-js@1.6.13:
-    resolution: {integrity: sha512-8HI84twe5FjYRebSLMAhtkL9bRuTDIlxJK56kjfjU9WKGoUCTaWpCnkuj8Hqde1bWZ0X+GOZxKDfNkn1CjtjxA==}
+  /@solidjs/router/0.8.0_solid-js@1.6.13:
+    resolution: {integrity: sha512-gvKAfYbuq6rpuNM9E7qIRXOrUEHY4AoOiok3xo/Slw5ph+hvJ+gKRhQgW0Et8xcsq2NZcc4AvJF8VTBmXfwEyA==}
     peerDependencies:
       solid-js: ^1.5.3
     dependencies:
@@ -3211,7 +3211,7 @@ packages:
       polka: 1.0.0-next.22
       rollup: 3.18.0
       sirv: 2.0.2
-      solid-start: 0.2.23_k342hytlp5zecshzhwb6byv654
+      solid-start: 0.2.23_jadobgo2tlpvbvwmonxhe7mota
       terser: 5.16.5
       undici: 5.20.0
       vite: 4.1.4
@@ -3231,14 +3231,14 @@ packages:
       fast-glob: 3.2.12
       micromatch: 4.0.5
       rollup: 3.18.0
-      solid-start: 0.2.23_k342hytlp5zecshzhwb6byv654
+      solid-start: 0.2.23_jadobgo2tlpvbvwmonxhe7mota
       terser: 5.16.5
       vite: 4.1.4
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  /solid-start/0.2.23_k342hytlp5zecshzhwb6byv654:
+  /solid-start/0.2.23_jadobgo2tlpvbvwmonxhe7mota:
     resolution: {integrity: sha512-dKTRFtpjskHFyLq9n6oJxqWHYL7H8w14y4+OgIR+57+lqb1N7289kZLTHrzWxWyzDkIG9V1s2MQtiDfIaBP/MQ==}
     hasBin: true
     peerDependencies:
@@ -3279,7 +3279,7 @@ packages:
       '@babel/preset-typescript': 7.21.0_@babel+core@7.21.0
       '@babel/template': 7.20.7
       '@solidjs/meta': 0.28.2_solid-js@1.6.13
-      '@solidjs/router': 0.7.0_solid-js@1.6.13
+      '@solidjs/router': 0.8.0_solid-js@1.6.13
       '@types/cookie': 0.5.1
       chokidar: 3.5.3
       compression: 1.7.4
