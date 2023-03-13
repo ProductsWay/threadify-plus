@@ -18,7 +18,7 @@
   "dependencies": {
     "@auth/core": "0.5.1",
     "@auth/solid-start": "0.1.1",
-    "@openreplay/tracker": "5.0.0",
+    "@openreplay/tracker": "5.0.1",
     "@solidjs/meta": "0.28.2",
     "@solidjs/router": "0.8.0",
     "@tailwindcss/typography": "0.5.9",
@@ -28,7 +28,7 @@
     "solid-js": "1.6.14",
     "solid-start": "0.2.23",
     "solid-start-vercel": "0.2.23",
-    "undici": "5.20.0",
+    "undici": "5.21.0",
     "wretch": "2.5.1",
     "zod": "3.21.4"
   },
