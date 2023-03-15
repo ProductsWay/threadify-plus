@@ -10,7 +10,7 @@ specifiers:
   '@types/jsonwebtoken': 9.0.1
   autoprefixer: 10.4.14
   consola: 2.15.3
-  daisyui: 2.51.3
+  daisyui: 2.51.4
   jsonwebtoken: 9.0.0
   postcss: 8.4.21
   solid-js: 1.6.14
@@ -32,7 +32,7 @@ dependencies:
   '@solidjs/router': 0.8.0_solid-js@1.6.14
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   consola: 2.15.3
-  daisyui: 2.51.3_j7yt3jd32cwenjqavrrga47yr4
+  daisyui: 2.51.4_j7yt3jd32cwenjqavrrga47yr4
   jsonwebtoken: 9.0.0
   solid-js: 1.6.14
   solid-start: 0.2.23_udel44vxcxdqx3iljlfrjuub5u
@@ -2007,8 +2007,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui/2.51.3_j7yt3jd32cwenjqavrrga47yr4:
-    resolution: {integrity: sha512-AQa9exq/DsnvjyDi6bwOqHExQr9LJJag0iKRXNvRRtHXPo1gaAQ3ASJWylUB8J8KMH2M9zIpr7cvPHc7yGckyQ==}
+  /daisyui/2.51.4_j7yt3jd32cwenjqavrrga47yr4:
+    resolution: {integrity: sha512-TGYD2BQCduxkKbDALlaWWaUdi33tryUuO/MxxBtAmLJ9zKn04gF6xduMxbrAUesR4AFr6LZW187TqF2H5c1AoA==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
