@@ -23,7 +23,7 @@
     "@solidjs/router": "0.8.0",
     "@tailwindcss/typography": "0.5.9",
     "consola": "2.15.3",
-    "daisyui": "2.51.3",
+    "daisyui": "2.51.4",
     "jsonwebtoken": "9.0.0",
     "solid-js": "1.6.14",
     "solid-start": "0.2.23",
