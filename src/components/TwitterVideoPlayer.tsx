@@ -22,6 +22,7 @@ export function TwitterVideoPlayer({ videoId }: { videoId: string }) {
     return getVideoById(videoId);
   });
 
+  // TODO: only play video on view port
   return (
     <Show when={video()}>
       <div class="px-4 mx-auto max-w-5xl card">

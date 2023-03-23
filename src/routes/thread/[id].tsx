@@ -16,6 +16,8 @@ export function routeData({ params }: RouteDataArgs) {
   });
 }
 
+// TODO: support embed twitter like e.g: /thread/1635796470824841216
+// TODO: show url instead of t.co e.g: /thread/1638566449840259073
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
 
@@ -76,10 +78,10 @@ export default function ThreadPage() {
                   position={`${index.call(index) + 1}/${ids.length}`}
                   createdAt={
                     currentId === id
-                      ? thread?.[currentId]?.data.created_at
+                      ? thread?.[currentId]?.data?.created_at
                       : undefined
                   }
-                  text={thread?.[currentId]?.data.text}
+                  text={thread?.[currentId]?.data?.text}
                   images={
                     thread?.[currentId]?.includes?.media
                       ?.filter((item) => item.type === "photo")
