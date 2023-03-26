@@ -81,6 +81,7 @@ export default function ThreadPage() {
                       : undefined
                   }
                   text={thread?.[currentId]?.data?.text}
+                  textUrls={thread?.[currentId]?.data?.text_urls ?? []}
                   images={
                     thread?.[currentId]?.includes?.media
                       ?.filter((item) => item.type === "photo")

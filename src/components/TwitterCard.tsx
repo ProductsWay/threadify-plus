@@ -8,11 +8,30 @@ const getFilename = (fileUrl: string) => {
   return fileName;
 };
 
-const ConvertUrlToLink = ({ text }: { text?: string }) => {
+const TextFormatter = ({
+  text,
+  urls,
+}: {
+  text?: string;
+  urls: {
+    url: string;
+    original_url: string;
+  }[];
+}) => {
   if (!text) return null;
 
   const urlRegex = /(https?:\/\/[^\s]+)/g;
-  const htmlContent = text?.replace(urlRegex, (url) => {
+  const htmlContent = text?.replace(urlRegex, (textUrl) => {
+    const url = textUrl.replace(",", "");
+    // remove url if that is photo or video
+    const isPhoto = urls.find(
+      (item) => item.original_url === url && item.url.includes("/photo/")
+    );
+    const isVideo = urls.find(
+      (item) => item.original_url === url && item.url.includes("/video/")
+    );
+    if (isPhoto || isVideo) return ``;
+
     return `<a class="link" href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
   });
 
@@ -38,23 +57,18 @@ const ConvertUrlToLink = ({ text }: { text?: string }) => {
     }
   );
 
-  // get all urls from text
-  const urls = text.match(urlRegex)?.filter(Boolean) ?? [];
-
   return (
-    <>
-      <p
-        class="w-full min-w-full text-xl prose"
-        innerHTML={htmlContentWithHashtag}
-      />
-      {urls.length > 0 && <PreviewUrls urls={urls} />}
-    </>
+    <p
+      class="w-full min-w-full text-xl prose"
+      innerHTML={htmlContentWithHashtag}
+    />
   );
 };
 
 export function TwitterCard({
   position,
   images = [],
+  textUrls = [],
   createdAt,
   text,
   videoId,
@@ -63,6 +77,10 @@ export function TwitterCard({
   images?: string[];
   createdAt?: Date;
   text?: string;
+  textUrls?: {
+    url: string;
+    original_url: string;
+  }[];
   videoId?: string;
 }) {
   return (
@@ -70,7 +88,15 @@ export function TwitterCard({
       <span class="badge badge-lg badge-info">{position}</span>
       {videoId && <TwitterVideoPlayer videoId={videoId} />}
       <div class="py-2 card-body">
-        <ConvertUrlToLink text={text} />
+        <TextFormatter text={text} urls={textUrls} />
+        <PreviewUrls
+          urls={textUrls
+            .filter(
+              (item) =>
+                !item.url.includes("/video/") && !item.url.includes("/photo/")
+            )
+            .map((item) => item.original_url.replace(",", ""))}
+        />
 
         {createdAt && (
           <div class="justify-end card-actions">

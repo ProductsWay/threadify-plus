@@ -8,6 +8,11 @@ export interface Data {
   edit_history_tweet_ids: string[];
   attachments: Attachments;
   text: string;
+  // custom field for urls in the text
+  text_urls: {
+    url: string;
+    original_url: string;
+  }[];
   created_at: Date;
   conversation_id: string;
   author_id: string;
