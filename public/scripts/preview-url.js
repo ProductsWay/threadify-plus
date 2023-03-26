@@ -1,15 +1,15 @@
-function h() {
+function f() {
 }
 function w(t) {
   return t();
 }
-function U() {
+function A() {
   return /* @__PURE__ */ Object.create(null);
 }
 function g(t) {
   t.forEach(w);
 }
-function b(t) {
+function $(t) {
   return typeof t == "function";
 }
 function P(t, e) {
@@ -33,7 +33,7 @@ function O(t) {
 function B(t) {
   return document.createTextNode(t);
 }
-function l(t, e, n) {
+function c(t, e, n) {
   n == null ? t.removeAttribute(e) : t.getAttribute(e) !== n && t.setAttribute(e, n);
 }
 function V(t) {
@@ -53,63 +53,63 @@ function m(t) {
   k = t;
 }
 const d = [], S = [];
-let _ = [];
+let h = [];
 const T = [], D = /* @__PURE__ */ Promise.resolve();
-let y = !1;
+let x = !1;
 function F() {
-  y || (y = !0, D.then(p));
+  x || (x = !0, D.then(_));
 }
-function x(t) {
-  _.push(t);
+function y(t) {
+  h.push(t);
 }
-const $ = /* @__PURE__ */ new Set();
-let f = 0;
-function p() {
-  if (f !== 0)
+const b = /* @__PURE__ */ new Set();
+let u = 0;
+function _() {
+  if (u !== 0)
     return;
   const t = k;
   do {
     try {
-      for (; f < d.length; ) {
-        const e = d[f];
-        f++, m(e), G(e.$$);
+      for (; u < d.length; ) {
+        const e = d[u];
+        u++, m(e), G(e.$$);
       }
     } catch (e) {
-      throw d.length = 0, f = 0, e;
+      throw d.length = 0, u = 0, e;
     }
-    for (m(null), d.length = 0, f = 0; S.length; )
+    for (m(null), d.length = 0, u = 0; S.length; )
       S.pop()();
-    for (let e = 0; e < _.length; e += 1) {
-      const n = _[e];
-      $.has(n) || ($.add(n), n());
+    for (let e = 0; e < h.length; e += 1) {
+      const n = h[e];
+      b.has(n) || (b.add(n), n());
     }
-    _.length = 0;
+    h.length = 0;
   } while (d.length);
   for (; T.length; )
     T.pop()();
-  y = !1, $.clear(), m(t);
+  x = !1, b.clear(), m(t);
 }
 function G(t) {
   if (t.fragment !== null) {
     t.update(), g(t.before_update);
     const e = t.dirty;
-    t.dirty = [-1], t.fragment && t.fragment.p(t.ctx, e), t.after_update.forEach(x);
+    t.dirty = [-1], t.fragment && t.fragment.p(t.ctx, e), t.after_update.forEach(y);
   }
 }
 function I(t) {
   const e = [], n = [];
-  _.forEach((r) => t.indexOf(r) === -1 ? e.push(r) : n.push(r)), n.forEach((r) => r()), _ = e;
+  h.forEach((r) => t.indexOf(r) === -1 ? e.push(r) : n.push(r)), n.forEach((r) => r()), h = e;
 }
 const J = /* @__PURE__ */ new Set();
 function K(t, e) {
   t && t.i && (J.delete(t), t.i(e));
 }
 function Q(t, e, n, r) {
-  const { fragment: o, after_update: i } = t.$$;
-  o && o.m(e, n), r || x(() => {
-    const u = t.$$.on_mount.map(w).filter(b);
-    t.$$.on_destroy ? t.$$.on_destroy.push(...u) : g(u), t.$$.on_mount = [];
-  }), i.forEach(x);
+  const { fragment: i, after_update: l } = t.$$;
+  i && i.m(e, n), r || y(() => {
+    const s = t.$$.on_mount.map(w).filter($);
+    t.$$.on_destroy ? t.$$.on_destroy.push(...s) : g(s), t.$$.on_mount = [];
+  }), l.forEach(y);
 }
 function W(t, e) {
   const n = t.$$;
@@ -118,44 +118,44 @@ function W(t, e) {
 function X(t, e) {
   t.$$.dirty[0] === -1 && (d.push(t), F(), t.$$.dirty.fill(0)), t.$$.dirty[e / 31 | 0] |= 1 << e % 31;
 }
-function Y(t, e, n, r, o, i, u, E = [-1]) {
-  const a = k;
+function Y(t, e, n, r, i, l, s, v = [-1]) {
+  const p = k;
   m(t);
-  const s = t.$$ = {
+  const o = t.$$ = {
     fragment: null,
     ctx: [],
     // state
-    props: i,
-    update: h,
-    not_equal: o,
-    bound: U(),
+    props: l,
+    update: f,
+    not_equal: i,
+    bound: A(),
     // lifecycle
     on_mount: [],
     on_destroy: [],
     on_disconnect: [],
     before_update: [],
     after_update: [],
-    context: new Map(e.context || (a ? a.$$.context : [])),
+    context: new Map(e.context || (p ? p.$$.context : [])),
     // everything else
-    callbacks: U(),
-    dirty: E,
+    callbacks: A(),
+    dirty: v,
     skip_bound: !1,
-    root: e.target || a.$$.root
+    root: e.target || p.$$.root
   };
-  u && u(s.root);
-  let v = !1;
-  if (s.ctx = n ? n(t, e.props || {}, (c, C, ...j) => {
-    const A = j.length ? j[0] : C;
-    return s.ctx && o(s.ctx[c], s.ctx[c] = A) && (!s.skip_bound && s.bound[c] && s.bound[c](A), v && X(t, c)), C;
-  }) : [], s.update(), v = !0, g(s.before_update), s.fragment = r ? r(s.ctx) : !1, e.target) {
+  s && s(o.root);
+  let E = !1;
+  if (o.ctx = n ? n(t, e.props || {}, (a, C, ...j) => {
+    const U = j.length ? j[0] : C;
+    return o.ctx && i(o.ctx[a], o.ctx[a] = U) && (!o.skip_bound && o.bound[a] && o.bound[a](U), E && X(t, a)), C;
+  }) : [], o.update(), E = !0, g(o.before_update), o.fragment = r ? r(o.ctx) : !1, e.target) {
     if (e.hydrate) {
-      const c = V(e.target);
-      s.fragment && s.fragment.l(c), c.forEach(H);
+      const a = V(e.target);
+      o.fragment && o.fragment.l(a), a.forEach(H);
     } else
-      s.fragment && s.fragment.c();
-    e.intro && K(t.$$.fragment), Q(t, e.target, e.anchor, e.customElement), p();
+      o.fragment && o.fragment.c();
+    e.intro && K(t.$$.fragment), Q(t, e.target, e.anchor, e.customElement), _();
   }
-  m(a);
+  m(p);
 }
 let L;
 typeof HTMLElement == "function" && (L = class extends HTMLElement {
@@ -164,7 +164,7 @@ typeof HTMLElement == "function" && (L = class extends HTMLElement {
   }
   connectedCallback() {
     const { on_mount: t } = this.$$;
-    this.$$.on_disconnect = t.map(w).filter(b);
+    this.$$.on_disconnect = t.map(w).filter($);
     for (const e in this.$$.slotted)
       this.appendChild(this.$$.slotted[e]);
   }
@@ -175,11 +175,11 @@ typeof HTMLElement == "function" && (L = class extends HTMLElement {
     g(this.$$.on_disconnect);
   }
   $destroy() {
-    W(this, 1), this.$destroy = h;
+    W(this, 1), this.$destroy = f;
   }
   $on(t, e) {
-    if (!b(e))
-      return h;
+    if (!$(e))
+      return f;
     const n = this.$$.callbacks[t] || (this.$$.callbacks[t] = []);
     return n.push(e), () => {
       const r = n.indexOf(e);
@@ -197,51 +197,57 @@ function Z(t) {
       e = O("div"), n = O("a"), r = B(
         /*url*/
         t[0]
-      ), this.c = h, l(n, "class", "link"), l(
+      ), this.c = f, c(n, "class", "link"), c(
         n,
         "href",
         /*url*/
         t[0]
-      ), l(n, "target", "_blank"), l(n, "rel", "noopener noreferrer"), l(e, "role", "contentinfo"), l(e, "class", "preview-url");
+      ), c(n, "target", "_blank"), c(n, "rel", "noopener noreferrer"), c(e, "role", "contentinfo"), c(e, "class", "preview-url"), c(
+        e,
+        "data-tooltip",
+        /*originalUrl*/
+        t[1]
+      );
     },
-    m(o, i) {
-      M(o, e, i), N(e, n), N(n, r);
+    m(i, l) {
+      M(i, e, l), N(e, n), N(n, r);
     },
-    p(o, [i]) {
-      i & /*url*/
+    p(i, [l]) {
+      l & /*url*/
       1 && q(
         r,
         /*url*/
-        o[0]
-      ), i & /*url*/
-      1 && l(
+        i[0]
+      ), l & /*url*/
+      1 && c(
         n,
         "href",
         /*url*/
-        o[0]
+        i[0]
       );
     },
-    i: h,
-    o: h,
-    d(o) {
-      o && H(e);
+    i: f,
+    o: f,
+    d(i) {
+      i && H(e);
     }
   };
 }
 function tt(t, e, n) {
-  let { url: r } = e, { shortened: o = "no" } = e;
-  return o === "yes" && (async () => {
-    const a = await (await fetch("https://twt-decode-url.productsway.com?url=" + r)).json();
-    n(0, r = a.url);
-  })(), t.$$set = (i) => {
-    "url" in i && n(0, r = i.url), "shortened" in i && n(1, o = i.shortened);
-  }, [r, o];
+  let { url: r } = e, { shortened: i = "no" } = e;
+  const l = r;
+  return i === "yes" && (async () => {
+    const o = await (await fetch("https://twt-decode-url.productsway.com?url=" + r)).json();
+    n(0, r = o.url);
+  })(), t.$$set = (s) => {
+    "url" in s && n(0, r = s.url), "shortened" in s && n(2, i = s.shortened);
+  }, [r, l, i];
 }
 class et extends L {
   constructor(e) {
     super();
     const n = document.createElement("style");
-    n.textContent = ".preview-url{text-align:center;padding:1em;max-width:240px;margin:0 auto}.link{display:inline-block;padding:10px 20px;border-radius:5px;background:linear-gradient(to right, blue, purple);color:white;text-decoration:none;transition:transform 0.3s}.link:hover{transform:scale(1.1)}@media(min-width: 640px){.preview-url{max-width:none}}", this.shadowRoot.appendChild(n), Y(
+    n.textContent = "[data-tooltip]{position:relative;display:inline-block}[data-tooltip]::before{content:attr(data-tooltip);position:absolute;bottom:100%;visibility:hidden;background-color:#555;color:#fff;text-align:center;border-radius:6px;padding:5px;min-width:100px}[data-tooltip]:hover::before{visibility:visible}.preview-url{text-align:center;padding:1em;max-width:240px;margin:0 auto}.link{display:inline-block;padding:10px 20px;border-radius:5px;background:linear-gradient(to right, blue, purple);color:white;text-decoration:none;transition:transform 0.3s}@media(max-width: 640px){.link{max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}.link:hover{transform:scale(1.1)}@media(min-width: 640px){.preview-url{max-width:none}}", this.shadowRoot.appendChild(n), Y(
       this,
       {
         target: this.shadowRoot,
@@ -251,9 +257,9 @@ class et extends L {
       tt,
       Z,
       P,
-      { url: 0, shortened: 1 },
+      { url: 0, shortened: 2 },
       null
-    ), e && (e.target && M(e.target, this, e.anchor), e.props && (this.$set(e.props), p()));
+    ), e && (e.target && M(e.target, this, e.anchor), e.props && (this.$set(e.props), _()));
   }
   static get observedAttributes() {
     return ["url", "shortened"];
@@ -262,13 +268,13 @@ class et extends L {
     return this.$$.ctx[0];
   }
   set url(e) {
-    this.$$set({ url: e }), p();
+    this.$$set({ url: e }), _();
   }
   get shortened() {
-    return this.$$.ctx[1];
+    return this.$$.ctx[2];
   }
   set shortened(e) {
-    this.$$set({ shortened: e }), p();
+    this.$$set({ shortened: e }), _();
   }
 }
 customElements.define("preview-url", et);

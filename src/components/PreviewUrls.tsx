@@ -8,14 +8,17 @@ export function PreviewUrls({ urls }: { urls: string[] }) {
   return (
     <div class="flex flex-row">
       <script async type="module" src="/scripts/preview-url.js"></script>
-      <section class="w-full bg-gray-100">
-        <div class="px-4 mx-auto text-xs sm:px-6 lg:px-8">
-          {urls.map((url) => (
-            // @ts-expect-error use preview-url web component
-            <preview-url key={url} url={url.replace(",", "")} shortened="yes" />
-          ))}
-        </div>
-      </section>
+      <div class={`w-full bg-gray-100`}>
+        {urls.map((url) => (
+          // @ts-expect-error use preview-url web component
+          <preview-url
+            class="max-w-xs"
+            key={url}
+            url={url.replace(`,`, "")}
+            shortened="yes"
+          />
+        ))}
+      </div>
     </div>
   );
 }
