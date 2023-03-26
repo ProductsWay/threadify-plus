@@ -1,5 +1,6 @@
-import { For, Show } from "solid-js";
+import { For, Show, createEffect, createSignal, onMount } from "solid-js";
 import { TwitterVideoPlayer } from "./TwitterVideoPlayer";
+import { PreviewUrls } from "./PreviewUrls";
 
 const getFilename = (fileUrl: string) => {
   const fileName = new URL(fileUrl).pathname.split("/").pop();
@@ -8,6 +9,8 @@ const getFilename = (fileUrl: string) => {
 };
 
 const ConvertUrlToLink = ({ text }: { text?: string }) => {
+  if (!text) return null;
+
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const htmlContent = text?.replace(urlRegex, (url) => {
     return `<a class="link" href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
@@ -35,11 +38,17 @@ const ConvertUrlToLink = ({ text }: { text?: string }) => {
     }
   );
 
+  // get all urls from text
+  const urls = text.match(urlRegex)?.filter(Boolean) ?? [];
+
   return (
-    <p
-      class="w-full min-w-full text-xl prose"
-      innerHTML={htmlContentWithHashtag}
-    />
+    <>
+      <p
+        class="w-full min-w-full text-xl prose"
+        innerHTML={htmlContentWithHashtag}
+      />
+      {urls.length > 0 && <PreviewUrls urls={urls} />}
+    </>
   );
 };
 

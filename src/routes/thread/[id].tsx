@@ -17,7 +17,6 @@ export function routeData({ params }: RouteDataArgs) {
 }
 
 // TODO: support embed twitter like e.g: /thread/1635796470824841216
-// TODO: show url instead of t.co e.g: /thread/1638566449840259073
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
 
@@ -103,7 +102,7 @@ export default function ThreadPage() {
           <script
             async
             type="module"
-            src="https://unpkg.com/sharing-btn@0.1.4/dist/esm/sharing-btn.js"
+            src="/scripts/sharing-btn/sharing-btn.esm.js"
           ></script>
           {/** @ts-expect-error use sharing-btn web component */}
           <sharing-btn
