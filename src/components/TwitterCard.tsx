@@ -1,4 +1,4 @@
-import { For, Show, createEffect, createSignal, onMount } from "solid-js";
+import { For, Show } from "solid-js";
 import { TwitterVideoPlayer } from "./TwitterVideoPlayer";
 import { PreviewUrls } from "./PreviewUrls";
 

@@ -110,9 +110,7 @@ export default function ThreadPage() {
             url={`https://threadify.productsway.com/thread/${id}`}
             description={content}
             to="all"
-          >
-            {/** @ts-expect-error use sharing-btn web component */}
-          </sharing-btn>
+          />
         </div>
       </div>
     </>
