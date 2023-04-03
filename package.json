@@ -18,7 +18,7 @@
   "dependencies": {
     "@auth/core": "0.5.1",
     "@auth/solid-start": "0.1.1",
-    "@openreplay/tracker": "5.0.2",
+    "@openreplay/tracker": "6.0.0",
     "@solidjs/meta": "0.28.4",
     "@solidjs/router": "0.8.2",
     "@tailwindcss/typography": "0.5.9",
