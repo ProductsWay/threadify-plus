@@ -29,7 +29,7 @@
     "solid-start": "0.2.26",
     "solid-start-vercel": "0.2.26",
     "undici": "5.21.2",
-    "wretch": "2.5.1",
+    "wretch": "2.5.2",
     "zod": "3.21.4"
   },
   "engines": {

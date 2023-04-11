@@ -41,8 +41,8 @@ dependencies:
     specifier: 5.21.2
     version: 5.21.2
   wretch:
-    specifier: 2.5.1
-    version: 2.5.1
+    specifier: 2.5.2
+    version: 2.5.2
   zod:
     specifier: 3.21.4
     version: 3.21.4
@@ -3492,8 +3492,8 @@ packages:
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  /wretch@2.5.1:
-    resolution: {integrity: sha512-flhLreVaTBrFlgNUkzS0GYwyoqQs85eq9IteWNKt+n3HYCXCr9HLP0iGajbauKol64ucSuLK8rqHKgbmsDeyJA==}
+  /wretch@2.5.2:
+    resolution: {integrity: sha512-6Pd1GvoNYzf17WH1jggzsq8E00UQqiO0kJvLS1dmIEnX8IE0zBfd77Sid5IqTGYVKhad88ygTudbvHdsvPvmCA==}
     engines: {node: '>=14'}
     dev: false
 
