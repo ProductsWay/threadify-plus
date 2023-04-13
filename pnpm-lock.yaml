@@ -20,8 +20,8 @@ dependencies:
     specifier: 0.5.9
     version: 0.5.9(tailwindcss@3.3.1)
   consola:
-    specifier: 3.0.1
-    version: 3.0.1
+    specifier: 3.0.2
+    version: 3.0.2
   daisyui:
     specifier: 2.51.5
     version: 2.51.5(autoprefixer@10.4.14)(postcss@8.4.21)
@@ -1968,8 +1968,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /consola@3.0.1:
-    resolution: {integrity: sha512-08E7bC2N6gaFdzPU/qtBi4ulVvJitYnfrDdxEiwElC3jSNICbOvkcE+8N56EfIrBoxp37O9Qnn5ZZPElov83UQ==}
+  /consola@3.0.2:
+    resolution: {integrity: sha512-o/Wau2FmZKiQgyp3c3IULgN6J5yc0lwYMnoyiZdEpdGxKGBtt2ACbkulBZ6BUsHy1HlSJqoP4YOyPIJLgRJyKQ==}
     dev: false
 
   /console-control-strings@1.1.0:
