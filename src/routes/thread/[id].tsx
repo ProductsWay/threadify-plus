@@ -16,6 +16,7 @@ export function routeData({ params }: RouteDataArgs) {
   });
 }
 
+// TODO: support gif file, e.g: https://threadify.productsway.com/thread/1650523712657977345
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
 
