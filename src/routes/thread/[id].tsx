@@ -16,7 +16,6 @@ export function routeData({ params }: RouteDataArgs) {
   });
 }
 
-// TODO: support embed twitter like e.g: /thread/1635796470824841216
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
 

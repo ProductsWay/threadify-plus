@@ -1,6 +1,10 @@
 import { For, Show } from "solid-js";
+
 import { TwitterVideoPlayer } from "./TwitterVideoPlayer";
 import { PreviewUrls } from "./PreviewUrls";
+import TwitterEmbed from "./TwitterEmbed";
+
+import logger from "~/logger";
 
 const getFilename = (fileUrl: string) => {
   const fileName = new URL(fileUrl).pathname.split("/").pop();
@@ -83,12 +87,19 @@ export function TwitterCard({
   }[];
   videoId?: string;
 }) {
+  // get all twitter urls from the url string
+  const twitterUrls = textUrls
+    .filter((item) => item.url.includes("twitter.com"))
+    .map((item) => item.url);
+
+  logger.info("twitterUrls", twitterUrls);
   return (
     <div class="py-8 mb-4 w-full text-left shadow-lg card bg-base-100">
       <span class="badge badge-lg badge-info">{position}</span>
       {videoId && <TwitterVideoPlayer videoId={videoId} />}
       <div class="py-2 card-body">
         <TextFormatter text={text} urls={textUrls} />
+
         <PreviewUrls
           urls={textUrls
             .filter(
@@ -97,6 +108,7 @@ export function TwitterCard({
             )
             .map((item) => item.original_url.replace(",", ""))}
         />
+        <For each={twitterUrls}>{(url) => <TwitterEmbed url={url} />}</For>
 
         {createdAt && (
           <div class="justify-end card-actions">
