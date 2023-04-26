@@ -16,7 +16,6 @@ export function routeData({ params }: RouteDataArgs) {
   });
 }
 
-// TODO: support gif file, e.g: https://threadify.productsway.com/thread/1650523712657977345
 export default function ThreadPage() {
   const data = useRouteData<typeof routeData>();
 
@@ -73,28 +72,32 @@ export default function ThreadPage() {
 
             <For each={ids}>
               {(currentId, index) => (
-                <TwitterCard
-                  position={`${index.call(index) + 1}/${ids.length}`}
-                  createdAt={
-                    currentId === id
-                      ? thread?.[currentId]?.data?.created_at
-                      : undefined
-                  }
-                  text={thread?.[currentId]?.data?.text}
-                  textUrls={thread?.[currentId]?.data?.text_urls ?? []}
-                  images={
-                    thread?.[currentId]?.includes?.media
-                      ?.filter((item) => item.type === "photo")
-                      ?.map((item) => item.url) ?? []
-                  }
-                  videoId={
-                    thread?.[currentId]?.includes?.media?.filter(
-                      (item) => item?.type === "video"
-                    )?.length ?? 0 > 0
-                      ? currentId
-                      : undefined
-                  }
-                />
+                <>
+                  <TwitterCard
+                    position={`${index.call(index) + 1}/${ids.length}`}
+                    createdAt={
+                      currentId === id
+                        ? thread?.[currentId]?.data?.created_at
+                        : undefined
+                    }
+                    text={thread?.[currentId]?.data?.text}
+                    textUrls={thread?.[currentId]?.data?.text_urls ?? []}
+                    images={
+                      thread?.[currentId]?.includes?.media
+                        ?.filter((item) => item.type === "photo")
+                        ?.map((item) => item.url) ?? []
+                    }
+                    videoId={
+                      thread?.[currentId]?.includes?.media?.filter(
+                        (item) =>
+                          item?.type === "video" ||
+                          item?.type === "animated_gif"
+                      )?.length ?? 0 > 0
+                        ? currentId
+                        : undefined
+                    }
+                  />
+                </>
               )}
             </For>
           </div>
