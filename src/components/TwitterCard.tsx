@@ -90,7 +90,8 @@ export function TwitterCard({
   // get all twitter urls from the url string
   const twitterUrls = textUrls
     .filter((item) => item.url.includes("twitter.com"))
-    .map((item) => item.url);
+    .map((item) => item.url)
+    .filter((item) => !item.includes("/photo/") && !item.includes("/video/"));
 
   logger.info("twitterUrls", twitterUrls);
   return (
