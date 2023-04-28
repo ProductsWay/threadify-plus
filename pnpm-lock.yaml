@@ -2,11 +2,11 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@auth/core':
-    specifier: 0.7.0
-    version: 0.7.0
+    specifier: 0.7.1
+    version: 0.7.1
   '@auth/solid-start':
     specifier: 0.1.1
-    version: 0.1.1(@auth/core@0.7.0)(solid-js@1.7.3)(solid-start@0.2.26)
+    version: 0.1.1(@auth/core@0.7.1)(solid-js@1.7.3)(solid-start@0.2.26)
   '@openreplay/tracker':
     specifier: 6.0.2
     version: 6.0.2
@@ -86,8 +86,8 @@ packages:
   /@antfu/utils@0.7.2:
     resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
 
-  /@auth/core@0.7.0:
-    resolution: {integrity: sha512-he6SZkU1WJ2TvFZxn7PnIwPSU6UXp4/HGUCSckahfzqhFZ3b7pGifRBffUKnubMiMZd9c7rCbWoZVNz4AxiiYA==}
+  /@auth/core@0.7.1:
+    resolution: {integrity: sha512-aAgzC/VlfnvxsFYp5Wau1pfIltRUBvfVxECR0imDPUznwXIkD9alvrai60tfImtPfXp1fnJpcKfiONpF5Rg8VQ==}
     peerDependencies:
       nodemailer: ^6.8.0
     peerDependenciesMeta:
@@ -102,14 +102,14 @@ packages:
       preact-render-to-string: 5.2.3(preact@10.11.3)
     dev: false
 
-  /@auth/solid-start@0.1.1(@auth/core@0.7.0)(solid-js@1.7.3)(solid-start@0.2.26):
+  /@auth/solid-start@0.1.1(@auth/core@0.7.1)(solid-js@1.7.3)(solid-start@0.2.26):
     resolution: {integrity: sha512-WMWBH/RbQTs5oFBoOjtJgKKZv3QlZQkyiAj1UnKWJ2+3UbuNQAhDBM4ppZD54CdbF/Wb1LVXjUNI6LBbopUK6g==}
     peerDependencies:
       '@auth/core': ~0.2.2 || ^0.2.2
       solid-js: ^1.5.7
       solid-start: ^0.2.14
     dependencies:
-      '@auth/core': 0.7.0
+      '@auth/core': 0.7.1
       solid-js: 1.7.3
       solid-start: 0.2.26(@solidjs/meta@0.28.4)(@solidjs/router@0.8.2)(solid-js@1.7.3)(solid-start-node@0.2.26)(solid-start-vercel@0.2.26)(vite@4.3.3)
     dev: false
