@@ -118,7 +118,7 @@ export default function ThreadPage() {
         </div>
 
         <div class="divider">Most view threads</div>
-        <div class="mb-16">
+        <div class="overflow-y-scroll py-2 px-4 my-4 mx-2 mb-16 w-full scrollbar-thumb-gray-500 scrollbar-track-gray-100">
           <TopThreads limit={10} />
         </div>
       </div>
