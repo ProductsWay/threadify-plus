@@ -4,6 +4,7 @@ import { createServerData$ } from "solid-start/server";
 import { getThreadById } from "~/api-client";
 import { SEO } from "~/components/SEO";
 import SiteTitle from "~/components/SiteTitle";
+import TopThreads from "~/components/TopThreads";
 import { TwitterCard } from "~/components/TwitterCard";
 import { UserCard } from "~/components/UserCard";
 
@@ -114,6 +115,11 @@ export default function ThreadPage() {
             description={content}
             to="all"
           />
+        </div>
+
+        <div class="divider">Most view threads</div>
+        <div class="mb-16">
+          <TopThreads limit={10} />
         </div>
       </div>
     </>

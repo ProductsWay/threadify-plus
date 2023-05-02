@@ -5,6 +5,20 @@ import { TwitterDetail } from "./types";
 
 const apiClient = wretch(clientEnv.API_URL); // Base url
 
+export const getTopTenThreads = async () => {
+  logger.info("get top ten threads");
+  const result = await apiClient.url(`/api/top-threads`).get().json<
+    {
+      id: string;
+      viewCount: number;
+      avatar: string;
+      username: string;
+    }[]
+  >();
+
+  return result;
+};
+
 export const getThreadById = async (id: string, limit = 50) => {
   logger.info("get thread by id", id);
   const result = await apiClient
