@@ -119,22 +119,28 @@ export function TwitterCard({
       </div>
 
       <Show when={images?.length}>
-        <div class="rounded-box">
-          <div class="carousel">
+        <div class="mx-auto rounded-box">
+          <div class="w-full carousel">
             <For each={images}>
               {(image) => (
                 <div
                   id={getFilename(image)}
-                  class="relative justify-center w-full carousel-item"
+                  class={
+                    images?.length > 1 ? "w-1/2 carousel-item" : "carousel-item"
+                  }
                 >
                   <figure>
-                    <img class="contain" src={image} alt={image} />
+                    <img
+                      class="w-auto max-h-screen contain"
+                      src={image}
+                      alt={image}
+                    />
                   </figure>
                 </div>
               )}
             </For>
           </div>
-          <Show when={(images?.length ?? 0) > 1}>
+          <Show when={(images?.length ?? 0) > 2}>
             <div class="flex gap-2 justify-center py-2 w-full">
               <For each={images}>
                 {(image, index) => (
