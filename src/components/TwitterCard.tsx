@@ -5,12 +5,7 @@ import { PreviewUrls } from "./PreviewUrls";
 import TwitterEmbed from "./TwitterEmbed";
 
 import logger from "~/logger";
-
-const getFilename = (fileUrl: string) => {
-  const fileName = new URL(fileUrl).pathname.split("/").pop();
-
-  return fileName;
-};
+import { Gallery } from "./Gallery";
 
 const TextFormatter = ({
   text,
@@ -120,38 +115,7 @@ export function TwitterCard({
 
       <Show when={images?.length}>
         <div class="mx-auto rounded-box">
-          <div class="w-full carousel">
-            <For each={images}>
-              {(image) => (
-                <div
-                  id={getFilename(image)}
-                  class={
-                    images?.length > 1
-                      ? "w-1/2 max-h-600 carousel-item"
-                      : "carousel-item"
-                  }
-                >
-                  <figure>
-                    <img class="w-auto contain" src={image} alt={image} />
-                  </figure>
-                </div>
-              )}
-            </For>
-          </div>
-          <Show when={(images?.length ?? 0) > 2}>
-            <div class="flex gap-2 justify-center py-2 w-full">
-              <For each={images}>
-                {(image, index) => (
-                  <a
-                    href={`#${getFilename(image)}`}
-                    class="btn btn-md btn-secondary"
-                  >
-                    {index.call(index) + 1}
-                  </a>
-                )}
-              </For>
-            </div>
-          </Show>
+          <Gallery images={images} />
         </div>
       </Show>
     </div>
