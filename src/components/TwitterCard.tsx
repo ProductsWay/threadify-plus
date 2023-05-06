@@ -126,15 +126,13 @@ export function TwitterCard({
                 <div
                   id={getFilename(image)}
                   class={
-                    images?.length > 1 ? "w-1/2 carousel-item" : "carousel-item"
+                    images?.length > 1
+                      ? "w-1/2 max-h-600 carousel-item"
+                      : "carousel-item"
                   }
                 >
                   <figure>
-                    <img
-                      class="w-auto max-h-screen contain"
-                      src={image}
-                      alt={image}
-                    />
+                    <img class="w-auto contain" src={image} alt={image} />
                   </figure>
                 </div>
               )}
