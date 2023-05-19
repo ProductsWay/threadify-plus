@@ -8,8 +8,8 @@ dependencies:
     specifier: 0.1.1
     version: 0.1.1(@auth/core@0.7.1)(solid-js@1.7.5)(solid-start@0.2.26)
   '@openreplay/tracker':
-    specifier: 6.0.2
-    version: 6.0.2
+    specifier: 7.0.1
+    version: 7.0.1
   '@solidjs/meta':
     specifier: 0.28.5
     version: 0.28.5(solid-js@1.7.5)
@@ -1472,8 +1472,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@openreplay/tracker@6.0.2:
-    resolution: {integrity: sha512-u9e4ZmONacXA0equZGtrrj1wk7za7HRUFk2O0ScOj8WjCltaabZDvsQbe1L3d80pf8zxzUQP6ClaBIF7KDH6CA==}
+  /@openreplay/tracker@7.0.1:
+    resolution: {integrity: sha512-S4gIIwEFcu18PPrWhAAOlRaMFxoHPWmIKE0/avHjZEYBq7f20dGKqvIydGB/RVy7WDCyK2uGLe8xajPCGpgU7w==}
     engines: {node: '>=14.0'}
     dependencies:
       '@medv/finder': 3.1.0
