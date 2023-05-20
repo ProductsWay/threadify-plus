@@ -15,8 +15,6 @@ export function TwitterEmbed({ url }: { url: string }) {
       logger.info("Fetched Twitter embed data", data);
       return data;
     } else {
-      // TODO: handle error
-      logger.error("Failed to fetch Twitter embed data", response);
       return null;
     }
   });

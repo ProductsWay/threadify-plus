@@ -11,7 +11,7 @@ const redirectAction = (id: string) => {
   window.location.href = url;
 };
 
-export function TwiterForm() {
+export function TwitterForm() {
   const [data, { Form }] = createRouteAction(async (formData: FormData) => {
     const url = formData.get("url");
     if (!url) {

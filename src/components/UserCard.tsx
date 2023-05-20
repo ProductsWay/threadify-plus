@@ -9,12 +9,12 @@ export function UserCard({
   username: string;
   picture: string;
 }) {
-  const orignalImage = picture.replace("_normal", "_200x200");
+  const originalImage = picture.replace("_normal", "_200x200");
   return (
     <div class="w-96 card card-side bg-base-100">
       <A href={`https://twitter.com/${username}`} target="_blank">
         <figure>
-          <img src={orignalImage} alt={name} class="mask mask-hexagon" />
+          <img src={originalImage} alt={name} class="mask mask-hexagon" />
         </figure>
       </A>
       <div class="card-body">
