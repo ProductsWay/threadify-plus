@@ -2,9 +2,9 @@ import { getSession } from "@auth/solid-start";
 import { Meta, useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
 import SiteTitle from "~/components/SiteTitle";
-import { TwiterForm } from "~/components/TwitterForm";
 import logger from "~/logger";
 import { authOpts } from "./api/auth/[...solidauth]";
+import { TwitterForm } from "~/components/TwitterForm";
 
 export const routeData = () => {
   return createServerData$(
@@ -43,7 +43,7 @@ export default function Home() {
 
       <div class="divider"></div>
 
-      <TwiterForm />
+      <TwitterForm />
     </main>
   );
 }
