@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   '@auth/core':
-    specifier: 0.7.1
-    version: 0.7.1
+    specifier: 0.8.1
+    version: 0.8.1
   '@auth/solid-start':
     specifier: 0.1.1
-    version: 0.1.1(@auth/core@0.7.1)(solid-js@1.7.6)(solid-start@0.2.26)
+    version: 0.1.1(@auth/core@0.8.1)(solid-js@1.7.6)(solid-start@0.2.26)
   '@openreplay/tracker':
-    specifier: 7.0.2
-    version: 7.0.2
+    specifier: 7.0.3
+    version: 7.0.3
   '@solidjs/meta':
     specifier: 0.28.5
     version: 0.28.5(solid-js@1.7.6)
@@ -68,8 +68,8 @@ devDependencies:
     specifier: 3.3.2
     version: 3.3.2
   typescript:
-    specifier: 5.0.4
-    version: 5.0.4
+    specifier: 5.1.3
+    version: 5.1.3
   vite:
     specifier: 4.3.9
     version: 4.3.9
@@ -90,8 +90,8 @@ packages:
   /@antfu/utils@0.7.3:
     resolution: {integrity: sha512-sAPXKvlJFVQB4cvmdGoUa9IAavzRrm7N2ctxdD1GuAEIOZu8BRrv2SUzquGXTpRDUa0sY7OkkVHqhi6ySMnMTg==}
 
-  /@auth/core@0.7.1:
-    resolution: {integrity: sha512-aAgzC/VlfnvxsFYp5Wau1pfIltRUBvfVxECR0imDPUznwXIkD9alvrai60tfImtPfXp1fnJpcKfiONpF5Rg8VQ==}
+  /@auth/core@0.8.1:
+    resolution: {integrity: sha512-WudBmZudZ/cvykxHV5hIwrYsd7AlETQ535O7w3sSiiumT28+U9GvBb8oSRtfzxpW9rym3lAdfeTJqGA8U4FecQ==}
     peerDependencies:
       nodemailer: ^6.8.0
     peerDependenciesMeta:
@@ -106,14 +106,14 @@ packages:
       preact-render-to-string: 5.2.3(preact@10.11.3)
     dev: false
 
-  /@auth/solid-start@0.1.1(@auth/core@0.7.1)(solid-js@1.7.6)(solid-start@0.2.26):
+  /@auth/solid-start@0.1.1(@auth/core@0.8.1)(solid-js@1.7.6)(solid-start@0.2.26):
     resolution: {integrity: sha512-WMWBH/RbQTs5oFBoOjtJgKKZv3QlZQkyiAj1UnKWJ2+3UbuNQAhDBM4ppZD54CdbF/Wb1LVXjUNI6LBbopUK6g==}
     peerDependencies:
       '@auth/core': ~0.2.2 || ^0.2.2
       solid-js: ^1.5.7
       solid-start: ^0.2.14
     dependencies:
-      '@auth/core': 0.7.1
+      '@auth/core': 0.8.1
       solid-js: 1.7.6
       solid-start: 0.2.26(@solidjs/meta@0.28.5)(@solidjs/router@0.8.2)(solid-js@1.7.6)(solid-start-node@0.2.26)(solid-start-vercel@0.2.26)(vite@4.3.9)
     dev: false
@@ -1533,8 +1533,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@openreplay/tracker@7.0.2:
-    resolution: {integrity: sha512-89HnG+ZZDxRO0EyStiTWN7cB8tOn+jgj52r0ciQIl+KXomhVpHeO/1vcCCaVRkYrkNryqxFyupPWVWlsDxfndA==}
+  /@openreplay/tracker@7.0.3:
+    resolution: {integrity: sha512-V9jPFmLfjdzUfV2vK+oGISkP62rqbqlXz1Ub9WrMIXoR2PoFN731LXX4lC+EMxB4DntORJSDazwVWG0etNasZg==}
     engines: {node: '>=14.0'}
     dependencies:
       '@medv/finder': 3.1.0
@@ -3541,9 +3541,9 @@ packages:
   /tslib@2.5.2:
     resolution: {integrity: sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==}
 
-  /typescript@5.0.4:
-    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
-    engines: {node: '>=12.20'}
+  /typescript@5.1.3:
+    resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}
+    engines: {node: '>=14.17'}
     hasBin: true
     dev: true
 
