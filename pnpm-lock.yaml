@@ -27,8 +27,8 @@ dependencies:
     specifier: 3.1.0
     version: 3.1.0
   daisyui:
-    specifier: 3.0.2
-    version: 3.0.2(postcss@8.4.24)
+    specifier: 3.0.3
+    version: 3.0.3(postcss@8.4.24)
   jsonwebtoken:
     specifier: 9.0.0
     version: 9.0.0
@@ -2087,8 +2087,8 @@ packages:
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
-  /daisyui@3.0.2(postcss@8.4.24):
-    resolution: {integrity: sha512-0X+0PkgTIWevt5m4AZCCgvqI5pKRormTEhdfmc31dwfLNq6uY4wENCXAtcXzZMKt7JBKcVTWlj/uDrOjj6XpUQ==}
+  /daisyui@3.0.3(postcss@8.4.24):
+    resolution: {integrity: sha512-RSbXsEBj2LonvjOKEI0I64F5xFJrFrthPgxRNeAZKmACQ3NoIoP45lO6UXLW3bm8PVOUGpKf1Br2SWwc1NqnHQ==}
     peerDependencies:
       postcss: ^8
     dependencies:
