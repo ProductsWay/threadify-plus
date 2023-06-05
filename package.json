@@ -16,7 +16,7 @@
     "vite": "4.3.9"
   },
   "dependencies": {
-    "@auth/core": "0.8.1",
+    "@auth/core": "0.8.2",
     "@auth/solid-start": "0.1.1",
     "@openreplay/tracker": "7.0.3",
     "@solidjs/meta": "0.28.5",
