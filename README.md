@@ -14,6 +14,9 @@
 ## Prerequisites
 
 - node >=16
+- Twitter API access (requires a paid Twitter account subscription at 100$ per month - yes, it's expensive 😉)
+<img width="1471" alt="image" src="https://github.com/jellydn/threadify-plus/assets/870029/e83f4f32-745c-4789-8ecb-faaebc9cffda">
+
 
 ## Built with
 
